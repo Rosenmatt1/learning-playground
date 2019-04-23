@@ -7,4 +7,6 @@ var bar = null;
 
 // console.log((bar !== null) && ((typeof bar === "object") || (typeof bar === "function")))
 
-console.log((bar !== null) && (typeof bar === "object") && (!$.isArray(bar)));
+console.log((bar !== null) && (typeof bar === "object") && (toString.call(bar) !== "[object Array]"));
+
+// console.log((bar !== null) && (typeof bar === "object") && (!$.isArray(bar)));
