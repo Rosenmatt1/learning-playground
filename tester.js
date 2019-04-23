@@ -3,4 +3,6 @@
 var bar = null;
 // console.log(typeof bar === "object")
 
-console.log((bar !== null) && (typeof bar === "object"))
+// console.log((bar !== null) && (typeof bar === "object"))
+
+console.log((bar !== null) && ((typeof bar === "object") || (typeof bar === "function")))
