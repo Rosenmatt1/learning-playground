@@ -59,7 +59,14 @@ isInteger = (x) => { return (typeof x === 'number') && (x % 1 === 0) }
 
 //if x is decimal x % 1 will not equal 0
 
-console.log(isInteger(100))
+// console.log(isInteger(100))
+
+(function () {
+  console.log(1);
+  setTimeout(function () { console.log(2) }, 1000);
+  setTimeout(function () { console.log(3) }, 0);
+  console.log(4);
+})()
 
 
 
