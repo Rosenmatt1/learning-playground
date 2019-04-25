@@ -97,6 +97,8 @@ function reverseString(str) {
     return "";
 
   else
+    console.log("charat", str.charAt(0))
+    console.log("substr", str.substr(1))
     return reverseString(str.substr(1)) + str.charAt(0);
   /* 
   First Part of the recursion method
