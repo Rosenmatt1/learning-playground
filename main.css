@@ -1,17 +1,18 @@
-//Using Flexbox for a class to take up proportionate columns
-
 .row {
   display: flex;
 }
 
 .col2 {
   flex: 2;
+  background-color: pink;
 }
 
 .col7 {
   flex: 7;
+  background-color: yellow;
 }
 
 .col3 {
   flex: 3;
+  background-color: blue;
 }
