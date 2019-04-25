@@ -76,22 +76,20 @@ palindrone = (str) => {
   first = str.substring(0, str.length/2)
   second = str.substring(str.length / 2, str.length)
 
-  console.log(first)
+  // for (let i = second.length -1; i >= 0; i--) {
+  //   reversedSecond += second[i]
+  // }
+  // console.log("first", first)
+  // console.log("second", first)
+  // console.log("reversedSecond", reversedSecond)
 
-  for (let i = second.length -1; i >= 0; i--) {
-    console.log(second[i])
-    reversedSecond += second[i]
-  }
-
-  console.log(reversedSecond)
-
-  if (first === reversedSecond) {
+  if (first === second) {
    return true
  }
  return false
 }
 
-palindrone("daddad")
+console.log(palindrone("daddad"))
 
 
 
