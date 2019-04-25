@@ -41,7 +41,11 @@ console.log("i++", i)
 // }
 
 console.log(typeof NaN)
-//Nan is technicaly a number 
+//NaN is technicaly a number 
+
+console.log(0.1 + 0.2)
+console.log(0.1 + 0.2 == 0.3)
+
 
 
 
