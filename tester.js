@@ -13,9 +13,18 @@ var bar = null;
 
 // The postfix increment operator evaluates to the value before it was incremented.
 
+// let i = 0
+// i++ // 0
+// i === 1
+// console.log("i++", i)
+
+
+// The prefix increment operator evaluates to the value after it was incremented.
+
 let i = 0
-i++ // 0
+++i // 1
 i === 1
+console.log("++i", i)
 
 
 
