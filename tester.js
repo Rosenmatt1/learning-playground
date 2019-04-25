@@ -52,7 +52,15 @@ console.log(typeof NaN)
 
 // console.log(areTheNumbersAlmostEqual(0.1, 0.2, 0.3))
 
-console.log(Number.isInteger(2))
+// console.log(Number.isInteger(2))
+
+
+isInteger = (x) => { return (typeof x === 'number') && (x % 1 === 0) }
+
+//if x is decimal x % 1 will not equal 0
+
+console.log(isInteger(100))
+
 
 
 
