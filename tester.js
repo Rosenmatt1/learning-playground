@@ -61,12 +61,37 @@ isInteger = (x) => { return (typeof x === 'number') && (x % 1 === 0) }
 
 // console.log(isInteger(100))
 
-(function () {
-  console.log(1);
-  setTimeout(function () { console.log(2) }, 1000);
-  setTimeout(function () { console.log(3) }, 0);
-  console.log(4);
-})()
+// (function () {
+//   console.log(1);
+//   setTimeout(function () { console.log(2) }, 1000);
+//   setTimeout(function () { console.log(3) }, 0);
+//   console.log(4);
+// })()
+
+palindrone = (str) => {
+ let first = ""
+ let second = ""
+ let reversedSecond = ""
+
+  first = str.substring(0, str.length/2)
+  second = str.substring(str.length / 2, str.length)
+
+  console.log(first)
+
+  for (let i = second.length -1; i >= 0; i--) {
+    console.log(second[i])
+    reversedSecond += second[i]
+  }
+
+  console.log(reversedSecond)
+
+  if (first === reversedSecond) {
+   return true
+ }
+ return false
+}
+
+palindrone("daddad")
 
 
 
