@@ -26,19 +26,22 @@ console.log("i++", i)
 // i === 1
 // console.log("++i", i)
 
-function foo1() {
-  return {
-    bar: "hello"
-  };
-}
+// function foo1() {
+//   return {
+//     bar: "hello"
+//   };
+// }
 
 
-function foo2() {
-  return
-  {
-    bar: "hello"
-  };
-}
+// function foo2() {
+//   return
+//   {
+//     bar: "hello"
+//   };
+// }
+
+console.log(typeof NaN)
+//Nan is technicaly a number 
 
 
 
