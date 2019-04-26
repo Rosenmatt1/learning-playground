@@ -70,14 +70,12 @@ isInteger = (x) => { return (typeof x === 'number') && (x % 1 === 0) }
 
 palindrone = (str) => {
  
- let first = ""
- let second = ""
- let reversedSecond = ""
-
-  let parsingStr = str.replace(/,/g, '')
-  // console.log("parsingStr", parsingStr)
-  let parsedStr = parsingStr.replace(/\s+/g, '').toLowerCase()
-  console.log("parsedStr", parsedStr.length)
+let first = ""
+let second = ""
+let reversedSecond = ""
+let parsingStr = str.replace(/,/g, '')
+let parsedStr = parsingStr.replace(/\s+/g, '').toLowerCase()
+console.log("parsedStr", parsedStr)
 
   if (parsedStr.length % 2 === 0) {
     first = parsedStr.substring(0, parsedStr.length / 2)
@@ -91,7 +89,6 @@ palindrone = (str) => {
     console.log("second", second)
   }
 
-  
   for (let i = second.length -1; i >= 0; i--) {
     reversedSecond += second[i]
   }
@@ -103,7 +100,8 @@ palindrone = (str) => {
  return false
 }
 
-console.log(palindrone("A car, a man, a maraca"))
+// console.log(palindrone("A car, a man, a maraca"))
+console.log(palindrone("dad"))
 
 
 function reverseString(str) {
