@@ -136,7 +136,16 @@ function reverseString(str) {
 // let word = "facetime"
 let word = ["facetime", "jango", "timmy", "buckto"]
 // console.log(word.charAt(2))
-console.log(word.indexOf("jango"))
+// console.log(word.indexOf("jango"))
+
+sum = (x) => {
+  console.log("length", arguments.length)
+  console.log("arguments", arguments[0] + arguments[1])
+  return x + y
+}
+
+// console.log(sum(2, 3));   // Outputs 5
+console.log(sum(2)(3));  // Outputs 5
 
 
 
