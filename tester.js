@@ -72,6 +72,7 @@ palindrone = (str) => {
  
  let first = ""
  let second = ""
+ let reversedSecond = ""
 
   let parsingStr = str.replace(/,/g, '')
   // console.log("parsingStr", parsingStr)
@@ -91,14 +92,12 @@ palindrone = (str) => {
   }
 
   
+  for (let i = second.length -1; i >= 0; i--) {
+    reversedSecond += second[i]
+  }
+  console.log("reversedSecond", reversedSecond)
 
-  // for (let i = second.length -1; i >= 0; i--) {
-  //   reversedSecond += second[i]
-  // }
-  
-  // console.log("reversedSecond", reversedSecond)
-
-  if (first === second) {
+  if (first === reversedSecond) {
    return true
  }
  return false
