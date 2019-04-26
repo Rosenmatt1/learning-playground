@@ -118,7 +118,12 @@ function reverseString(str) {
   1st call will return reverserString("ello") + "h" = "o" + "l" + "l" + "e" + "h" 
   */
 }
-console.log(reverseString("hello"))
+// console.log(reverseString("hello"))
+
+
+let word = "facetime"
+console.log(word.charAt(2))
+console.log(word.indexOf("c"))
 
 
 
