@@ -154,7 +154,18 @@ arr.forEach((k) => {
   d[k] = "value"
 })
 
-console.log(d)
+// console.log(d)
+
+var arr1 = "john".split('')
+console.log("1", arr1)
+var arr2 = arr1.reverse()
+console.log("2", arr2)
+var arr3 = "jones".split('')
+console.log("3", arr3)
+arr2.push(arr3)
+console.log("final2", arr2)
+
+
 
 
 
