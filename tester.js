@@ -121,9 +121,10 @@ function reverseString(str) {
 // console.log(reverseString("hello"))
 
 
-let word = "facetime"
-console.log(word.charAt(2))
-console.log(word.indexOf("c"))
+// let word = "facetime"
+let word = ["facetime", "jango", "timmy", "buckto"]
+// console.log(word.charAt(2))
+console.log(word.indexOf("jango"))
 
 
 
