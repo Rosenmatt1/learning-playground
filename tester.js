@@ -145,7 +145,16 @@ sum = (x) => {
 }
 
 // console.log(sum(2, 3));   // Outputs 5
-console.log(sum(2)(3));  // Outputs 5
+// console.log(sum(2)(3));  // Outputs 5
+
+let d = {}
+let arr = ['zebra', 'horse']
+
+arr.forEach((k) => {
+  d[k] = "value"
+})
+
+console.log(d)
 
 
 
