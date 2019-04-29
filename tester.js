@@ -208,11 +208,16 @@ var bar = null;
 // outerFunc(123)
 // innerFunc(456)
 
-for (let i = 0; i < 5; i++) {
-  setTimeout(() => { 
-    console.log(i); 
-  }, i * 1000)
-}
+// for (let i = 0; i <= 5; i++) {
+//   setTimeout(() => { 
+//     console.log(i); 
+//   }, i * 1000)
+// }
+
+console.log("0 || 1 = " + (0 || 1))
+console.log("1 || 2 = " + (1 || 2))
+console.log("0 && 1 = " + (0 && 1))
+console.log("1 && 2 = " + (1 && 2))
 
 
 
