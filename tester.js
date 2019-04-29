@@ -171,7 +171,7 @@ console.log("+-", 1 + -"1" + "2");
 console.log("112", "1" + "1" + "2");
 console.log("a-b+string2", "A" - "B" + "2");
 console.log("a-b+2", "A" - "B" + 2);
-console.log("++5", 3 + + "2");
+console.log("++5", 3 + - "2");
 
 
 
