@@ -192,19 +192,21 @@ const globalVar = "xyz";
 outerFunc = outerArg => {
   let outerVar = 'a';
 
-  // (function innerFunc(innerArg) {
-  //   let innerVar = 'b';
+  innerFunc = (innerArg) => {
+    let innerVar = 'b';
 
     console.log(
       "outerArg = " + outerArg + "\n" +
-  //     "innerArg = " + innerArg + "\n" +
+      // "innerArg = " + innerArg + "\n" +
       "outerVar = " + outerVar + "\n" +
-  //     "innerVar = " + innerVar + "\n" +
+      "innerVar = " + innerVar + "\n" +
       "globalVar = " + globalVar);
-  // })(456)
+  }
 
 } 
+
 outerFunc(123)
+innerFunc(456)
 
 
 
