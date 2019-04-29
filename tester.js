@@ -214,10 +214,13 @@ var bar = null;
 //   }, i * 1000)
 // }
 
-console.log("0 || 1 = " + (0 || 1))
-console.log("1 || 2 = " + (1 || 2))
-console.log("0 && 1 = " + (0 && 1))
-console.log("1 && 2 = " + (1 && 2))
+// console.log("0 || 1 = " + (0 || 1))
+// console.log("1 || 2 = " + (1 || 2))
+// console.log("0 && 1 = " + (0 && 1))
+// console.log("1 && 2 = " + (1 && 2))
+
+console.log(false == '0')
+console.log(false === '0')
 
 
 
