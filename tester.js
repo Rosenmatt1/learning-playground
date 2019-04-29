@@ -173,19 +173,38 @@ arr.forEach((k) => {
 // console.log("a-b+2", "A" - "B" + 2)
 // console.log("++5", 3 + - "2");
 
-var list = [6, 8, 3, 10, 12, 5, 11];
+// var list = [6, 8, 3, 10, 12, 5, 11];
 
-var nextListItem = function () {
-  var item = list.pop();
+// var nextListItem = function () {
+//   var item = list.pop();
 
-  if (item) {
-    console.log(list)
-    console.log(item)
-    setTimeout(nextListItem, 0);
-  }
-};
+//   if (item) {
+//     console.log(list)
+//     console.log(item)
+//     setTimeout(nextListItem, 0);
+//   }
+// };
 
-console.log(nextListItem())
+// console.log(nextListItem())
+
+const globalVar = "xyz";
+
+outerFunc = outerArg => {
+  let outerVar = 'a';
+
+  // (function innerFunc(innerArg) {
+  //   let innerVar = 'b';
+
+    console.log(
+      "outerArg = " + outerArg + "\n" +
+  //     "innerArg = " + innerArg + "\n" +
+      "outerVar = " + outerVar + "\n" +
+  //     "innerVar = " + innerVar + "\n" +
+      "globalVar = " + globalVar);
+  // })(456)
+
+} 
+outerFunc(123)
 
 
 
