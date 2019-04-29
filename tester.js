@@ -156,14 +156,22 @@ arr.forEach((k) => {
 
 // console.log(d)
 
-var arr1 = "john".split('')
-console.log("1", arr1)
-var arr2 = arr1.reverse()
-console.log("2", arr2)
-var arr3 = "jones".split('')
-console.log("3", arr3)
-arr2.push(arr3)
-console.log("final2", arr2)
+// var arr1 = "john".split('')
+// console.log("1", arr1)
+// var arr2 = arr1.reverse()
+// console.log("2", arr2)
+// var arr3 = "jones".split('')
+// console.log("3", arr3)
+// arr2.push(arr3)
+// console.log("final2", arr2)
+
+console.log("122", 1 + "2" + "2");
+console.log("++", 1 + + "2" + "2");
+console.log("+-", 1 + -"1" + "2");
+console.log("112", "1" + "1" + "2");
+console.log("a-b+string2", "A" - "B" + "2");
+console.log("a-b+2", "A" - "B" + 2);
+console.log("++5", 3 + + "2");
 
 
 
