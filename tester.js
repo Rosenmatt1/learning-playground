@@ -219,8 +219,26 @@ var bar = null;
 // console.log("0 && 1 = " + (0 && 1))
 // console.log("1 && 2 = " + (1 && 2))
 
-console.log(false == '0')
-console.log(false === '0')
+// console.log(false == '0')
+// console.log(false === '0')
+
+var a = {},
+  b = 'b',
+  c = 'c';
+
+a[b] = 123;
+a[c] = 456;
+
+console.log(a);
+
+var a = {},
+  b = { key: 'b' },
+  c = { key: 'c' };
+
+a[b] = 123;
+a[c] = 456;
+
+console.log(a[b]);
 
 
 
