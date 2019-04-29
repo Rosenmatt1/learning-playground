@@ -165,13 +165,27 @@ arr.forEach((k) => {
 // arr2.push(arr3)
 // console.log("final2", arr2)
 
-console.log("122", 1 + "2" + "2");
-console.log("++", 1 + + "2" + "2");
-console.log("+-", 1 + -"1" + "2");
-console.log("112", "1" + "1" + "2");
-console.log("a-b+string2", "A" - "B" + "2");
-console.log("a-b+2", "A" - "B" + 2);
-console.log("++5", 3 + - "2");
+// console.log("122", 1 + "2" + "2");
+// console.log("++", 1 + + "2" + "2");
+// console.log("+-", 1 + -"1" + "2");
+// console.log("112", "1" + "1" + "2");
+// console.log("a-b+string2", "A" - "B" + "2")
+// console.log("a-b+2", "A" - "B" + 2)
+// console.log("++5", 3 + - "2");
+
+var list = [6, 8, 3, 10, 12, 5, 11];
+
+var nextListItem = function () {
+  var item = list.pop();
+
+  if (item) {
+    console.log(list)
+    console.log(item)
+    setTimeout(nextListItem, 0);
+  }
+};
+
+console.log(nextListItem())
 
 
 
