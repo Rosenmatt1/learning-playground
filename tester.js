@@ -13,10 +13,10 @@ var bar = null;
 
 // The postfix increment operator evaluates to the value before it was incremented.
 
-let i = 0
-i++ // 0
-i === 1
-console.log("i++", i)
+// let i = 0
+// i++ // 0
+// i === 1
+// console.log("i++", i)
 
 
 // The prefix increment operator evaluates to the value after it was incremented.
@@ -40,7 +40,7 @@ console.log("i++", i)
 //   };
 // }
 
-console.log(typeof NaN)
+// console.log(typeof NaN)
 //NaN is technicaly a number 
 
 // console.log(Math.abs(0.1 + 0.2))
@@ -55,7 +55,7 @@ console.log(typeof NaN)
 // console.log(Number.isInteger(2))
 
 
-isInteger = (x) => { return (typeof x === 'number') && (x % 1 === 0) }
+// isInteger = (x) => { return (typeof x === 'number') && (x % 1 === 0) }
 
 //if x is decimal x % 1 will not equal 0
 
@@ -68,50 +68,50 @@ isInteger = (x) => { return (typeof x === 'number') && (x % 1 === 0) }
 //   console.log(4);
 // })()
 
-palindrone = (str) => {
+// palindrone = (str) => {
  
-let first = ""
-let second = ""
-let reversedSecond = ""
-let parsingStr = str.replace(/,/g, '')
-let parsedStr = parsingStr.replace(/\s+/g, '').toLowerCase()
-console.log("parsedStr", parsedStr)
+// let first = ""
+// let second = ""
+// let reversedSecond = ""
+// let parsingStr = str.replace(/,/g, '')
+// let parsedStr = parsingStr.replace(/\s+/g, '').toLowerCase()
+// console.log("parsedStr", parsedStr)
 
-  if (parsedStr.length % 2 === 0) {
-    first = parsedStr.substring(0, parsedStr.length / 2)
-    second = parsedStr.substring(parsedStr.length / 2, parsedStr.length)
-    console.log("first", first)
-    console.log("second", second)
-  } else {
-    first = parsedStr.substring(0, parsedStr.length / 2)
-    second = parsedStr.substring((parsedStr.length / 2) + 1, parsedStr.length)
-    console.log("first", first)
-    console.log("second", second)
-  }
+//   if (parsedStr.length % 2 === 0) {
+//     first = parsedStr.substring(0, parsedStr.length / 2)
+//     second = parsedStr.substring(parsedStr.length / 2, parsedStr.length)
+//     console.log("first", first)
+//     console.log("second", second)
+//   } else {
+//     first = parsedStr.substring(0, parsedStr.length / 2)
+//     second = parsedStr.substring((parsedStr.length / 2) + 1, parsedStr.length)
+//     console.log("first", first)
+//     console.log("second", second)
+//   }
 
-  for (let i = second.length -1; i >= 0; i--) {
-    reversedSecond += second[i]
-  }
-  console.log("reversedSecond", reversedSecond)
+//   for (let i = second.length -1; i >= 0; i--) {
+//     reversedSecond += second[i]
+//   }
+//   console.log("reversedSecond", reversedSecond)
 
-  if (first === reversedSecond) {
-   return true
- }
- return false
-}
+//   if (first === reversedSecond) {
+//    return true
+//  }
+//  return false
+// }
 
 // console.log(palindrone("A car, a man, a maraca"))
-console.log(palindrone("dad"))
+// console.log(palindrone("dad"))
 
 
-function reverseString(str) {
-  if (str === "") // This is the terminal case that will end the recursion
-    return "";
+// function reverseString(str) {
+//   if (str === "") // This is the terminal case that will end the recursion
+//     return "";
 
-  else
-    console.log("charat", str.charAt(0))
-    console.log("substr", str.substr(1))
-    return reverseString(str.substr(1)) + str.charAt(0);
+//   else
+//     console.log("charat", str.charAt(0))
+//     console.log("substr", str.substr(1))
+//     return reverseString(str.substr(1)) + str.charAt(0);
   /* 
   First Part of the recursion method
   You need to remember that you won’t have just one call, you’ll have several nested calls
@@ -129,30 +129,30 @@ function reverseString(str) {
   2nd call will return reverserString("llo") + "e" = "o" + "l" + "l" + "e"
   1st call will return reverserString("ello") + "h" = "o" + "l" + "l" + "e" + "h" 
   */
-}
+// }
 // console.log(reverseString("hello"))
 
 
 // let word = "facetime"
-let word = ["facetime", "jango", "timmy", "buckto"]
+// let word = ["facetime", "jango", "timmy", "buckto"]
 // console.log(word.charAt(2))
 // console.log(word.indexOf("jango"))
 
-sum = (x) => {
-  console.log("length", arguments.length)
-  console.log("arguments", arguments[0] + arguments[1])
-  return x + y
-}
+// sum = (x) => {
+//   console.log("length", arguments.length)
+//   console.log("arguments", arguments[0] + arguments[1])
+//   return x + y
+// }
 
 // console.log(sum(2, 3));   // Outputs 5
 // console.log(sum(2)(3));  // Outputs 5
 
-let d = {}
-let arr = ['zebra', 'horse']
+// let d = {}
+// let arr = ['zebra', 'horse']
 
-arr.forEach((k) => {
-  d[k] = "value"
-})
+// arr.forEach((k) => {
+//   d[k] = "value"
+// })
 
 // console.log(d)
 
@@ -187,26 +187,32 @@ arr.forEach((k) => {
 
 // console.log(nextListItem())
 
-const globalVar = "xyz";
+// const globalVar = "xyz";
 
-outerFunc = outerArg => {
-  let outerVar = 'a';
+// outerFunc = outerArg => {
+//   let outerVar = 'a';
 
-  innerFunc = (innerArg) => {
-    let innerVar = 'b';
+//   innerFunc = (innerArg) => {
+//     let innerVar = 'b';
 
-    console.log(
-      "outerArg = " + outerArg + "\n" +
-      // "innerArg = " + innerArg + "\n" +
-      "outerVar = " + outerVar + "\n" +
-      "innerVar = " + innerVar + "\n" +
-      "globalVar = " + globalVar);
-  }
+//     console.log(
+//       "outerArg = " + outerArg + "\n" +
+//       // "innerArg = " + innerArg + "\n" +
+//       "outerVar = " + outerVar + "\n" +
+//       "innerVar = " + innerVar + "\n" +
+//       "globalVar = " + globalVar);
+//   }
 
-} 
+// } 
 
-outerFunc(123)
-innerFunc(456)
+// outerFunc(123)
+// innerFunc(456)
+
+for (let i = 0; i < 5; i++) {
+  setTimeout(() => { 
+    console.log(i); 
+  }, i * 1000)
+}
 
 
 
