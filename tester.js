@@ -347,15 +347,34 @@ var bar = null;
 //   )
 // }
 
-var array1 = [1, 2, 3]
-var array2 = [1, 2, 3]
+// var array1 = [1, 2, 3]
+// var array2 = [1, 2, 3]
 
 // console.log(array1 == array2)
 
-compare = (arr1, arr2) => {
+// compare = (arr1, arr2) => {
 
-  for (let i = 0; i <= arr1.length; i++ ) {
-    if (arr1[i] !== arr2[i]) {
+//   for (let i = 0; i <= arr1.length; i++ ) {
+//     if (arr1[i] !== arr2[i]) {
+//       return false
+//     }
+//   }
+
+//   return true
+// }
+
+// console.log(compare(array1, array2))
+
+var object1 = { a: 1, b: 2}
+var object2 = { a: 1, b: 2 }
+
+compare = (obj1, obj2) => {
+
+  let holder1 = Object.values(obj1)
+  let holder2 = Object.values(obj2)
+
+    for (let i = 0; i <= holder1.length; i++ ) {
+    if (holder1[i] !== holder2[i]) {
       return false
     }
   }
@@ -363,4 +382,5 @@ compare = (arr1, arr2) => {
   return true
 }
 
-console.log(compare(array1, array2))
+console.log(compare(object1, object2))
+
