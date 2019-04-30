@@ -284,6 +284,16 @@ var bar = null;
 // const boundExample = bind(example, { a: true })
 // boundExample.call({ b: true }) // logs { a: true }
 
+const map = (arr) => {
+  const result = []
+  for (let i = 0; i < arr.length; i++) {
+    result.push(arr[i] * 2)
+  }
+  return result
+}
+console.log(map([1, 2, 3, 4, 5])) // [2, 4, 6, 8, 10]
+
+
 const map = (arr, callback) => {
   const result = []
   for (let i = 0; i < arr.length; i++) {
@@ -291,6 +301,4 @@ const map = (arr, callback) => {
   }
   return result
 }
-console.log(map([1, 2, 3, 4, 5], n => n * 2)) // [2, 4, 6, 8, 10]
-
-
+map([1, 2, 3, 4, 5], n => n * 2) // [2, 4, 6, 8, 10]
