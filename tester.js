@@ -284,21 +284,26 @@ var bar = null;
 // const boundExample = bind(example, { a: true })
 // boundExample.call({ b: true }) // logs { a: true }
 
-const map = (arr) => {
-  const result = []
-  for (let i = 0; i < arr.length; i++) {
-    result.push(arr[i] * 2)
-  }
-  return result
-}
-console.log(map([1, 2, 3, 4, 5])) // [2, 4, 6, 8, 10]
+// const map = (arr) => {
+//   const result = []
+//   for (let i = 0; i < arr.length; i++) {
+//     result.push(arr[i] * 2)
+//   }
+//   return result
+// }
+// console.log(map([1, 2, 3, 4, 5])) // [2, 4, 6, 8, 10]
 
 
-const map = (arr, callback) => {
-  const result = []
-  for (let i = 0; i < arr.length; i++) {
-    result.push(callback(arr[i], i))
-  }
-  return result
-}
-map([1, 2, 3, 4, 5], n => n * 2) // [2, 4, 6, 8, 10]
+// const map = (arr, callback) => {
+//   const result = []
+//   for (let i = 0; i < arr.length; i++) {
+//     result.push(callback(arr[i], i))
+//   }
+//   return result
+// }
+// map([1, 2, 3, 4, 5], n => n * 2) // [2, 4, 6, 8, 10]
+
+const obj = { a: 1, b: 2 }
+const shallowClone = { ...obj }
+
+console.log(shallowClone)
