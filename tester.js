@@ -384,18 +384,25 @@ var bar = null;
 
 // console.log(compare(object1, object2))
 
-var object1 = { a: 1, b: 2 }
-var object2 = { a: 1, b: 2 }
+// var object1 = { a: 1, b: 2 }
+// var object2 = { a: 1, b: 2 }
 
-compare = (obj1, obj2) => {
+// compare = (obj1, obj2) => {
 
-  for (value in obj1) {
-    if (obj1[value] !== obj2[value]) {
-      return false
-    }
-  }
-return true
-}
+//   for (value in obj1) {
+//     if (obj1[value] !== obj2[value]) {
+//       return false
+//     }
+//   }
+// return true
+// }
 
-console.log(compare(object1, object2))
+// console.log(compare(object1, object2))
+
+false
+undefined
+null
+""(empty string)
+NaN
+0(both + 0 and - 0)
 
