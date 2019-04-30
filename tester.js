@@ -222,25 +222,45 @@ var bar = null;
 // console.log(false == '0')
 // console.log(false === '0')
 
-var a = {},
-  b = 'b',
-  c = 'c';
+// var a = {},
+//   b = 'b',
+//   c = 'c';
 
-a[b] = 123;
-a[c] = 456;
+// a[b] = 123;
+// a[c] = 456;
 
-console.log(a);
+// console.log(a);
 
-var a = {},
-  b = { key: 'b' },
-  c = { key: 'c' };
+// var a = {},
+//   b = { key: 'b' },
+//   c = { key: 'c' };
 
-a[b] = 123;
-a[c] = 456;
+// a[b] = 123;
+// a[c] = 456;
 
-console.log(a[b]);
+// console.log(a[b]);
 
+// console.log("first");
+// setTimeout(function () {
+//   console.log("second");
+// }, 0);
+// console.log("third");
 
+// {
+//   console.time("loop");
+//   for (var i = 0; i < 1000000; i += 1) {
+//     // Do nothing
+//     console.log(i)
+//   }
+//   console.timeEnd("loop");
+// }
+
+console.log(hoist)
+var hoist = "value"
+
+var hoist
+console.log(hoist)
+hoist = "value"
 
 
 
