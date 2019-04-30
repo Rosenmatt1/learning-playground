@@ -365,21 +365,36 @@ var bar = null;
 
 // console.log(compare(array1, array2))
 
-var object1 = { a: 1, b: 2}
+// var object1 = { a: 1, b: 2}
+// var object2 = { a: 1, b: 2 }
+
+// compare = (obj1, obj2) => {
+
+//   let holder1 = Object.values(obj1)
+//   let holder2 = Object.values(obj2)
+
+//     for (let i = 0; i <= holder1.length; i++ ) {
+//     if (holder1[i] !== holder2[i]) {
+//       return false
+//     }
+//   }
+
+//   return true
+// }
+
+// console.log(compare(object1, object2))
+
+var object1 = { a: 1, b: 2 }
 var object2 = { a: 1, b: 2 }
 
 compare = (obj1, obj2) => {
 
-  let holder1 = Object.values(obj1)
-  let holder2 = Object.values(obj2)
-
-    for (let i = 0; i <= holder1.length; i++ ) {
-    if (holder1[i] !== holder2[i]) {
+  for (value in obj1) {
+    if (obj1[value] !== obj2[value]) {
       return false
     }
   }
-
-  return true
+return true
 }
 
 console.log(compare(object1, object2))
