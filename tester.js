@@ -262,17 +262,27 @@ var bar = null;
 // console.log(hoist)
 // hoist = "value"
 
-myFunction() // No error; logs "hello"
-function myFunction() {
-  console.log("hello")
-}
+// myFunction() // No error; logs "hello"
+// function myFunction() {
+//   console.log("hello")
+// }
 
-myFunction() // Error: `myFunction` is not a function
-var myFunction = function () {
-  console.log("hello")
-}
+// myFunction() // Error: `myFunction` is not a function
+// var myFunction = function () {
+//   console.log("hello")
+// }
+
+// let i = 0
+// console.log("before", i)
+// i++ // 0
+// console.log("after", i)
+// // i === 1
 
 
-
+let i = 0
+console.log("before", i)
+++i // 1
+console.log("after", i)
+// i === 1
 
 
