@@ -278,11 +278,19 @@ var bar = null;
 // console.log("after", i)
 // // i === 1
 
+// function example() {
+//   console.log(this)
+// }
+// const boundExample = bind(example, { a: true })
+// boundExample.call({ b: true }) // logs { a: true }
 
-let i = 0
-console.log("before", i)
-++i // 1
-console.log("after", i)
-// i === 1
+const map = (arr, callback) => {
+  const result = []
+  for (let i = 0; i < arr.length; i++) {
+    result.push(callback(arr[i], i))
+  }
+  return result
+}
+console.log(map([1, 2, 3, 4, 5], n => n * 2)) // [2, 4, 6, 8, 10]
 
 
