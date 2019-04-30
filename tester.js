@@ -255,13 +255,22 @@ var bar = null;
 //   console.timeEnd("loop");
 // }
 
-console.log(hoist)
-var hoist = "value"
+// console.log(hoist)
+// var hoist = "value"
 
-var hoist
-console.log(hoist)
-hoist = "value"
+// var hoist
+// console.log(hoist)
+// hoist = "value"
 
+myFunction() // No error; logs "hello"
+function myFunction() {
+  console.log("hello")
+}
+
+myFunction() // Error: `myFunction` is not a function
+var myFunction = function () {
+  console.log("hello")
+}
 
 
 
