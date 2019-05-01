@@ -406,12 +406,19 @@ var bar = null;
 // NaN
 // 0(both + 0 and - 0)
 
-var foo = 1
-foobar = () => {
-  console.log("foo1st", foo)
-  var foo = 2
-  console.log("foo2nd", foo)
-}
+// var foo = 1
+// foobar = () => {
+//   console.log("foo1st", foo)
+//   var foo = 2
+//   console.log("foo2nd", foo)
+// }
 
-foobar()
+// foobar()
+
+// console.log(hoist)
+// var hoist = "value"
+
+var hoist
+console.log(hoist)
+hoist = "value"
 
