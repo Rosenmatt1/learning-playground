@@ -399,10 +399,19 @@ var bar = null;
 
 // console.log(compare(object1, object2))
 
-false
-undefined
-null
-""(empty string)
-NaN
-0(both + 0 and - 0)
+// false
+// undefined
+// null
+// ""(empty string)
+// NaN
+// 0(both + 0 and - 0)
+
+var foo = 1
+foobar = () => {
+  console.log("foo1st", foo)
+  var foo = 2
+  console.log("foo2nd", foo)
+}
+
+foobar()
 
