@@ -418,7 +418,13 @@ var bar = null;
 // console.log(hoist)
 // var hoist = "value"
 
-var hoist
-console.log(hoist)
-hoist = "value"
+// var hoist
+// hoist = "value"
+// console.log(hoist)
+
+  < button onclick = "handleClick()" > </button >
+  < button onClick = { handleClick } />
+
+  <a href="#" onclick="console.log('The link was clicked.'); return false" />
+
 
