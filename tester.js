@@ -479,6 +479,15 @@
 
 // console.log(mask("123456789")) // "#####6789"
 
-console.log(undefined == null)
+// console.log(undefined == null)
 
+fs.readFile(filePath, function (err, data) {
+  if (err) {
+    // handle the error, the return is important here
+    // so execution stops here
+    return console.log(err)
+  }
+  // use the data object
+  console.log(data)
+})
 
