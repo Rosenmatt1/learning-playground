@@ -449,16 +449,31 @@
 
 // Error Handling: In this phase, the component is called whenever there's an error during rendering, in a lifecycle method, or in the constructor for any child component. This phase includes the componentDidCatch lifecycle method.
 
+// mask = (str) => {
+//   let masked = ""
+
+//   for (let i = 0; i < str.length -4; i++) {
+//     masked += "#"
+//   }
+//   for (let i = str.length-4; i < str.length; i++) {
+//     masked += str[i]
+//   }
+
+//   return masked
+// }
+
+// console.log(mask("123456789")) // "#####6789"
+
 mask = (str) => {
   let masked = ""
 
-  for (let i = 0; i < str.length -4; i++) {
-    masked += "#"
+  for (let i = 0; i < str.length; i++) {
+    if (i < str.length -4) {
+      masked += "#"
+    } else {
+      masked += str[i]
+    }
   }
-  for (let i = str.length-4; i < str.length; i++) {
-    masked += str[i]
-  }
-
   return masked
 }
 
