@@ -505,8 +505,8 @@
 //   return -1
 // }
 
-var array = [5, 8, 23, 55, 87]
-var num = 55
+var array = [4,5,6,7,8,9]
+var num = 9
 
 function binarySearch(array, num) {
   var minIndex = 0;
@@ -516,7 +516,9 @@ function binarySearch(array, num) {
 
   while (minIndex <= maxIndex) {
     currentIndex = Math.floor((minIndex + maxIndex) / 2)
+    console.log("currentIndex", currentIndex)
     currentElement = array[currentIndex]
+    console.log(currentElement)
     if (currentElement < num) {
       minIndex = currentIndex + 1
     } else if (currentElement > num) {
