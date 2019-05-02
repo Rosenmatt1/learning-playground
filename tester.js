@@ -1,6 +1,6 @@
 // example that shows that null is technically an object
 
-var bar = null;
+// var bar = null;
 // console.log(typeof bar === "object")
 
 // console.log((bar !== null) && (typeof bar === "object"))
@@ -422,9 +422,19 @@ var bar = null;
 // hoist = "value"
 // console.log(hoist)
 
-  < button onclick = "handleClick()" > </button >
-  < button onClick = { handleClick } />
+  // < button onclick = "handleClick()" > </button >
+  // < button onClick = { handleClick } />
 
-  <a href="#" onclick="console.log('The link was clicked.'); return false" />
+  // <a href="#" onclick="console.log('The link was clicked.'); return false" />
+
+const myLibrary = (function () {
+  var privateVariable = 2
+  return {
+    publicMethod: () => privateVariable
+  }
+})()
+
+// console.log(privateVariable) // ReferenceError
+console.log(myLibrary.publicMethod()) // 2
 
 
