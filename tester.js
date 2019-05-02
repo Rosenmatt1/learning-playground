@@ -464,19 +464,23 @@
 
 // console.log(mask("123456789")) // "#####6789"
 
-mask = (str) => {
-  let masked = ""
+// mask = (str) => {
+//   let masked = ""
 
-  for (let i = 0; i < str.length; i++) {
-    if (i < str.length -4) {
-      masked += "#"
-    } else {
-      masked += str[i]
-    }
-  }
-  return masked
-}
+//   for (let i = 0; i < str.length; i++) {
+//     if (i < str.length -4) {
+//       masked += "#"
+//     } else {
+//       masked += str[i]
+//     }
+//   }
+//   return masked
+// }
 
-console.log(mask("123456789")) // "#####6789"
+// console.log(mask("123456789")) // "#####6789"
+
+console.log(undefined == null)
+console.log(typeof null)
+console.log(typeof undefined)
 
 
