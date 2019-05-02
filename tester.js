@@ -491,19 +491,42 @@
 //   console.log(data)
 // })
 
+
+// console.log(linearSearch(array, num)) // 3
+
+// function linearSearch(array, num) {
+
+//   for (let i = 0; i <= array.length; i++) {
+//     if (array[i] === num) {
+//       return array.indexOf(num)
+//     }
+//   }
+
+//   return -1
+// }
+
 var array = [5, 8, 23, 55, 87]
 var num = 55
 
-console.log(linearSearch(array, num)) // 3
+function binarySearch(array, num) {
+  var minIndex = 0;
+  var maxIndex = array.length - 1;
+  var currentIndex;
+  var currentElement;
 
-function linearSearch(array, num) {
-
-  for (let i = 0; i <= array.length; i++) {
-    if (array[i] === num) {
-      return array.indexOf(num)
+  while (minIndex <= maxIndex) {
+    currentIndex = Math.floor((minIndex + maxIndex) / 2)
+    currentElement = array[currentIndex]
+    if (currentElement < num) {
+      minIndex = currentIndex + 1
+    } else if (currentElement > num) {
+      maxIndex = currentIndex - 1
+    } else {
+      return currentIndex
     }
   }
-
   return -1
 }
+
+console.log(binarySearch(array, num))
 
