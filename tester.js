@@ -480,7 +480,5 @@
 // console.log(mask("123456789")) // "#####6789"
 
 console.log(undefined == null)
-console.log(typeof null)
-console.log(typeof undefined)
 
 
