@@ -481,13 +481,29 @@
 
 // console.log(undefined == null)
 
-fs.readFile(filePath, function (err, data) {
-  if (err) {
-    // handle the error, the return is important here
-    // so execution stops here
-    return console.log(err)
+// fs.readFile(filePath, function (err, data) {
+//   if (err) {
+//     // handle the error, the return is important here
+//     // so execution stops here
+//     return console.log(err)
+//   }
+//   // use the data object
+//   console.log(data)
+// })
+
+var array = [5, 8, 23, 55, 87]
+var num = 55
+
+console.log(linearSearch(array, num)) // 3
+
+function linearSearch(array, num) {
+
+  for (let i = 0; i <= array.length; i++) {
+    if (array[i] === num) {
+      return array.indexOf(num)
+    }
   }
-  // use the data object
-  console.log(data)
-})
+
+  return -1
+}
 
