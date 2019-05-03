@@ -561,11 +561,13 @@
 //   // })
 // } 
 
-for (var i = 0; i < 10; i++) {
-  // Passed as an argument will use the value as-is in
-  // that point in time
-  setTimeout(console.log, 0, i)
-}
+// for (var i = 0; i < 10; i++) {
+//   // Passed as an argument will use the value as-is in
+//   // that point in time
+//   setTimeout(console.log, 0, i)
+// }
+
+console.log((function f(n) { return ((n > 1) ? n * f(n - 1) : n) })(10));
 
 
 
