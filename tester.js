@@ -505,30 +505,39 @@
 //   return -1
 // }
 
-var array = [4,5,6,7,8,9]
-var num = 9
+// var array = [4,5,6,7,8,9]
+// var num = 9
 
-function binarySearch(array, num) {
-  var minIndex = 0;
-  var maxIndex = array.length - 1;
-  var currentIndex;
-  var currentElement;
+// function binarySearch(array, num) {
+//   var minIndex = 0;
+//   var maxIndex = array.length - 1;
+//   var currentIndex;
+//   var currentElement;
 
-  while (minIndex <= maxIndex) {
-    currentIndex = Math.floor((minIndex + maxIndex) / 2)
-    console.log("currentIndex", currentIndex)
-    currentElement = array[currentIndex]
-    console.log(currentElement)
-    if (currentElement < num) {
-      minIndex = currentIndex + 1
-    } else if (currentElement > num) {
-      maxIndex = currentIndex - 1
-    } else {
-      return currentIndex
-    }
-  }
-  return -1
+//   while (minIndex <= maxIndex) {
+//     currentIndex = Math.floor((minIndex + maxIndex) / 2)
+//     console.log("currentIndex", currentIndex)
+//     currentElement = array[currentIndex]
+//     console.log(currentElement)
+//     if (currentElement < num) {
+//       minIndex = currentIndex + 1
+//     } else if (currentElement > num) {
+//       maxIndex = currentIndex - 1
+//     } else {
+//       return currentIndex
+//     }
+//   }
+//   return -1
+// }
+
+// console.log(binarySearch(array, num))
+
+let array = [5,9,4,2,1,10,22]
+
+let median = (arr) => {
+  let temp = 0
+
 }
 
-console.log(binarySearch(array, num))
+console.log(median(array))
 
