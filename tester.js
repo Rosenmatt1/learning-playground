@@ -532,27 +532,34 @@
 
 // console.log(binarySearch(array, num))
 
-swap = (arr, idx1, idx2) => {
-  let temp = arr[idx1]
-  arr[idx1] = arr[idx2]
-  arr[idx2] = temp
-}
+// swap = (arr, idx1, idx2) => {
+//   let temp = arr[idx1]
+//   arr[idx1] = arr[idx2]
+//   arr[idx2] = temp
+// }
 
-let array = [5,9,4,2,1,10,22]
+// let array = [5,9,4,2,1,10,22]
 
-median = (arr) => {
+// median = (arr) => {
 
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < arr.length; j++) {
-      if (arr[j] > arr[j+1]) {
-      swap(arr, j, j+1)
-      }
-    }
-  }
-  return arr
-}
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = 0; j < arr.length; j++) {
+//       if (arr[j] > arr[j+1]) {
+//       swap(arr, j, j+1)
+//       }
+//     }
+//   }
+//   return arr
+// }
 
-console.log(median(array))
+// console.log(median(array))
+
+for (var i = 0; i < 10; i++) {
+  // setTimeout(() => {
+    // logs `10` ten times
+    console.log(i)
+  // })
+} 
 
 
 
