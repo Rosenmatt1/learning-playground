@@ -554,12 +554,18 @@
 
 // console.log(median(array))
 
+// for (var i = 0; i < 10; i++) {
+//   // setTimeout(() => {
+//     // logs `10` ten times
+//     console.log(i)
+//   // })
+// } 
+
 for (var i = 0; i < 10; i++) {
-  // setTimeout(() => {
-    // logs `10` ten times
-    console.log(i)
-  // })
-} 
+  // Passed as an argument will use the value as-is in
+  // that point in time
+  setTimeout(console.log, 0, i)
+}
 
 
 
