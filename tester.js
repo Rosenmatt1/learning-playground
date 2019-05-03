@@ -567,7 +567,12 @@
 //   setTimeout(console.log, 0, i)
 // }
 
-console.log((function f(n) { return ((n > 1) ? n * f(n - 1) : n) })(10));
+// (function f(n) { return ((n > 1) ? n * f(n - 1) : n) })(10)
+
+  fact = (n) => { 
+    return ((n > 1) ? n * fact(n - 1) : n) 
+  }
+  console.log(fact(10))
 
 
 
