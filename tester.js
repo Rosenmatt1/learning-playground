@@ -532,12 +532,26 @@
 
 // console.log(binarySearch(array, num))
 
-let array = [5,9,4,2,1,10,22]
-
-let median = (arr) => {
-  let temp = 0
-
+swap = (array, idx1, idx2) => {
+  let temp = idx1
+  idx1 = idx2
+  idx2 = temp
 }
 
-console.log(median(array))
+let array = [5,9,4,2,1,10,22]
+
+let sorter = (arr) => {
+  let temp = 0
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > arr[i+1]) {
+      
+    }
+  }
+  return arr
+}
+
+console.log(sorter(array))
+
+
 
