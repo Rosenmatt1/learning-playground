@@ -567,12 +567,33 @@
 //   setTimeout(console.log, 0, i)
 // }
 
-// (function f(n) { return ((n > 1) ? n * f(n - 1) : n) })(10)
+// console.log((fact = (n) => { return ((n > 1) ? n * fact(n - 1) : n) })(10))
 
-  fact = (n) => { 
-    return ((n > 1) ? n * fact(n - 1) : n) 
+  // fact = (n, total = 0) => { 
+  //   if (n < 1) {
+  //     return total
+  //   }
+  //   // return ((n > 1) ? n * fact(n - 1) : n) 
+  //   while (n >= 1) {
+  //     console.log(n)
+  //     total = n * fact(n-1)
+  //   }
+  //   return total
+  // }
+  // console.log(fact(10))
+
+var hero = {
+  _name: 'John Doe',
+  getSecretIdentity: function () {
+    return this._name
   }
-  console.log(fact(10))
+};
+
+var stoleSecretIdentity = hero.getSecretIdentity.bind(hero);
+// var stoleSecretIdentity = hero.getSecretIdentity
+
+console.log(stoleSecretIdentity())
+console.log(hero.getSecretIdentity())
 
 
 
