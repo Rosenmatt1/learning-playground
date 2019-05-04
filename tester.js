@@ -671,9 +671,22 @@
 
 // console.log(mean(array))
 
-const array = [6, 7, 8, 9, 10, 11]
+const array = [6, 7, 8, 9, 6, 10, 11]
 
 mode = (arr) => {
+  let obj = []
+  let max = 0
+
+  for (let i = 0; i < arr.length; i++) {
+    if (obj[arr[i]] === undefined) {
+      obj[arr[i]] = 1
+    } else {
+      obj[arr[i]]++
+    }
+  }
+
+  
+
 
 }
 
