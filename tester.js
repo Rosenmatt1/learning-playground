@@ -641,24 +641,24 @@
 
 // console.log(intense("Jambbo!!!"))
 
-const array = [6, 7, 8, 9, 10, 11]
+// const array = [6, 7, 8, 9, 10, 11]
 
-median = (arr) => {
-  let med = 0
+// median = (arr) => {
+//   let med = 0
 
-  if (arr.length % 2 !== 0) {
-   med = arr[(arr.length / 2) - .5]
-   return med
-  }
+//   if (arr.length % 2 !== 0) {
+//    med = arr[(arr.length / 2) - .5]
+//    return med
+//   }
 
-  if (arr.length % 2 === 0) {
-    med = (arr[(arr.length / 2) - 1] + arr[arr.length / 2]) / 2
-    return med
-  }
+//   if (arr.length % 2 === 0) {
+//     med = (arr[(arr.length / 2) - 1] + arr[arr.length / 2]) / 2
+//     return med
+//   }
 
-}
+// }
 
-console.log(median(array))
+// console.log(median(array))
 
 // function mean(arr) {
 //   let total = 0
@@ -670,6 +670,14 @@ console.log(median(array))
 // }
 
 // console.log(mean(array))
+
+const array = [6, 7, 8, 9, 10, 11]
+
+mode = (arr) => {
+
+}
+
+console.log(mode(array))
 
 
 
