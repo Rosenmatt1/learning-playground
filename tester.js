@@ -685,6 +685,12 @@ mode = (arr) => {
     }
   }
 
+  for (val in obj) {
+    if (obj[val] > max) {
+      max = val
+    }
+  }
+  return max
 }
 
 console.log(mode(array))
