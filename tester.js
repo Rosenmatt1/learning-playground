@@ -69,7 +69,7 @@
 // })()
 
 // palindrone = (str) => {
- 
+
 // let first = ""
 // let second = ""
 // let reversedSecond = ""
@@ -112,23 +112,23 @@
 //     console.log("charat", str.charAt(0))
 //     console.log("substr", str.substr(1))
 //     return reverseString(str.substr(1)) + str.charAt(0);
-  /* 
-  First Part of the recursion method
-  You need to remember that you won’t have just one call, you’ll have several nested calls
-  Each call: str === "?"        	                  reverseString(str.subst(1))     + str.charAt(0)
-  1st call – reverseString("Hello")   will return   reverseString("ello")           + "h"
-  2nd call – reverseString("ello")    will return   reverseString("llo")            + "e"
-  3rd call – reverseString("llo")     will return   reverseString("lo")             + "l"
-  4th call – reverseString("lo")      will return   reverseString("o")              + "l"
-  5th call – reverseString("o")       will return   reverseString("")               + "o"
-  Second part of the recursion method
-  The method hits the if condition and the most highly nested call returns immediately
-  5th call will return reverseString("") + "o" = "o"
-  4th call will return reverseString("o") + "l" = "o" + "l"
-  3rd call will return reverseString("lo") + "l" = "o" + "l" + "l"
-  2nd call will return reverserString("llo") + "e" = "o" + "l" + "l" + "e"
-  1st call will return reverserString("ello") + "h" = "o" + "l" + "l" + "e" + "h" 
-  */
+/* 
+First Part of the recursion method
+You need to remember that you won’t have just one call, you’ll have several nested calls
+Each call: str === "?"        	                  reverseString(str.subst(1))     + str.charAt(0)
+1st call – reverseString("Hello")   will return   reverseString("ello")           + "h"
+2nd call – reverseString("ello")    will return   reverseString("llo")            + "e"
+3rd call – reverseString("llo")     will return   reverseString("lo")             + "l"
+4th call – reverseString("lo")      will return   reverseString("o")              + "l"
+5th call – reverseString("o")       will return   reverseString("")               + "o"
+Second part of the recursion method
+The method hits the if condition and the most highly nested call returns immediately
+5th call will return reverseString("") + "o" = "o"
+4th call will return reverseString("o") + "l" = "o" + "l"
+3rd call will return reverseString("lo") + "l" = "o" + "l" + "l"
+2nd call will return reverserString("llo") + "e" = "o" + "l" + "l" + "e"
+1st call will return reverserString("ello") + "h" = "o" + "l" + "l" + "e" + "h" 
+*/
 // }
 // console.log(reverseString("hello"))
 
@@ -422,10 +422,10 @@
 // hoist = "value"
 // console.log(hoist)
 
-  // < button onclick = "handleClick()" > </button >
-  // < button onClick = { handleClick } />
+// < button onclick = "handleClick()" > </button >
+// < button onClick = { handleClick } />
 
-  // <a href="#" onclick="console.log('The link was clicked.'); return false" />
+// <a href="#" onclick="console.log('The link was clicked.'); return false" />
 
 // const myLibrary = (function () {
 //   var privateVariable = 2
@@ -569,18 +569,18 @@
 
 // console.log((fact = (n) => { return ((n > 1) ? n * fact(n - 1) : n) })(10))
 
-  // fact = (n, total = 0) => { 
-  //   if (n < 1) {
-  //     return total
-  //   }
-  //   // return ((n > 1) ? n * fact(n - 1) : n) 
-  //   while (n >= 1) {
-  //     console.log(n)
-  //     total = n * fact(n-1)
-  //   }
-  //   return total
-  // }
-  // console.log(fact(10))
+// fact = (n, total = 0) => { 
+//   if (n < 1) {
+//     return total
+//   }
+//   // return ((n > 1) ? n * fact(n - 1) : n) 
+//   while (n >= 1) {
+//     console.log(n)
+//     total = n * fact(n-1)
+//   }
+//   return total
+// }
+// console.log(fact(10))
 
 // var hero = {
 //   _name: 'John Doe',
@@ -636,7 +636,7 @@
 //   } else {
 //     return false
 //   }
-  
+
 // }
 
 // console.log(intense("Jambbo!!!"))
@@ -678,15 +678,12 @@ mode = (arr) => {
   let max = 0
 
   for (let i = 0; i < arr.length; i++) {
-    if (obj[arr[i]] === undefined) {
+    if (!obj[arr[i]]) {
       obj[arr[i]] = 1
     } else {
       obj[arr[i]]++
     }
   }
-
-  
-
 
 }
 
