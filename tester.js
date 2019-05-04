@@ -582,18 +582,40 @@
   // }
   // console.log(fact(10))
 
-var hero = {
-  _name: 'John Doe',
-  getSecretIdentity: function () {
-    return this._name
+// var hero = {
+//   _name: 'John Doe',
+//   getSecretIdentity: function () {
+//     return this._name
+//   }
+// };
+
+// var stoleSecretIdentity = hero.getSecretIdentity.bind(hero);
+// // var stoleSecretIdentity = hero.getSecretIdentity
+
+// console.log(stoleSecretIdentity())
+// console.log(hero.getSecretIdentity())
+
+function intenseString(str) {
+  // var exclam = "!"
+  var count = 0
+  var finder = str.indexOf("!")
+
+  for (let i = finder; i < str.length; i++) {
+    if (str[i] !== "!") {
+      return false
+    } else {
+      count++
+    }
   }
-};
 
-var stoleSecretIdentity = hero.getSecretIdentity.bind(hero);
-// var stoleSecretIdentity = hero.getSecretIdentity
+  if (count >= 3) {
+    return true
+  } else {
+    return false
+  }
+}
 
-console.log(stoleSecretIdentity())
-console.log(hero.getSecretIdentity())
+console.log(intenseString("Jimb!o!!!"))
 
 
 
