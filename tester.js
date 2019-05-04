@@ -617,29 +617,42 @@
 
 // console.log(intenseString("Jimbo!!!"))
 
-intense = (str) => {
-  let count = 0
-  let finder = str.indexOf("!")
+// intense = (str) => {
+//   let count = 0
+//   let finder = str.indexOf("!")
 
-  for (let i = finder; i < str.length; i++) {
-    console.log(str[i])
-    if (str[i] !== "!") {
-      return false
-    } else {
-      count++
-      console.log(count)
-    }
-  }
+//   for (let i = finder; i < str.length; i++) {
+//     console.log(str[i])
+//     if (str[i] !== "!") {
+//       return false
+//     } else {
+//       count++
+//       console.log(count)
+//     }
+//   }
 
-  if (count >= 3) {
-    return true
-  } else {
-    return false
-  }
+//   if (count >= 3) {
+//     return true
+//   } else {
+//     return false
+//   }
   
+// }
+
+// console.log(intense("Jambbo!!!"))
+
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+function mean(arr) {
+  let total = 0
+
+  for (let i = 0; i < arr.length; i++) {
+    total += arr[i]
+  }
+  return total / arr.length
 }
 
-console.log(intense("Jambbo!!!"))
+console.log(mean(array))
 
 
 
