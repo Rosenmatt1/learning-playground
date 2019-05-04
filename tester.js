@@ -595,16 +595,39 @@
 // console.log(stoleSecretIdentity())
 // console.log(hero.getSecretIdentity())
 
-function intenseString(str) {
-  // var exclam = "!"
-  var count = 0
-  var finder = str.indexOf("!")
+// function intenseString(str) {
+//   // var exclam = "!"
+//   var count = 0
+//   var finder = str.indexOf("!")
+
+//   for (let i = finder; i < str.length; i++) {
+//     if (str[i] !== "!") {
+//       return false
+//     } else {
+//       count++
+//     }
+//   }
+
+//   if (count >= 3) {
+//     return true
+//   } else {
+//     return false
+//   }
+// }
+
+// console.log(intenseString("Jimbo!!!"))
+
+intense = (str) => {
+  let count = 0
+  let finder = str.indexOf("!")
 
   for (let i = finder; i < str.length; i++) {
+    console.log(str[i])
     if (str[i] !== "!") {
       return false
     } else {
       count++
+      console.log(count)
     }
   }
 
@@ -613,9 +636,10 @@ function intenseString(str) {
   } else {
     return false
   }
+  
 }
 
-console.log(intenseString("Jimb!o!!!"))
+console.log(intense("Jambbo!!!"))
 
 
 
