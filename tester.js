@@ -695,34 +695,38 @@ The method hits the if condition and the most highly nested call returns immedia
 
 // console.log(mode(array))
 
-var obj = {
-  "John Edwards": "Cast Away",
-  "Tom Stewart": "Living Legends",
-  "Edgar Poe": "Tampee",
-}
+var obj = [ 
+  {title: "castaway"},
+  {title: "Living Legends"},
+  {title: "Jambaree" }
+]
 
-function titles(books) {
-  const result = []
+// function titles(books) {
+//   const result = []
 
-  for (let i = 0; i < books.length; i++) {
-    const book = books[i]
-    const title = book.title
+//   for (let i = 0; i < books.length; i++) {
+//     const book = books[i]
+//     console.log(book)
+//     const title = book.title
+//     // console.log(title)
 
-    result.push(title)
+//     result.push(title)
+//   }
+//   return result
+// }
+
+// console.log(titles(obj))
+
+function titles(books, result = []) {
+  if (result.length < books.length) {
+    result.push(books[result.length].title)
+    return titles(books, result)
+  } else if (result.length === books.length) {
+    return result
   }
-  return result
 }
 
 console.log(titles(obj))
-
-// function titles(books, result = []) {
-//   if (result.length < books.length) {
-//     result.push(books[result.length].title)
-//     return titles(books, result)
-//   } else if (result.length === books.length) {
-//     return result
-//   }
-// }
 
 // function lengths (strings) {
 //   const result = []
