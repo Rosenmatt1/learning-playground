@@ -671,29 +671,146 @@ The method hits the if condition and the most highly nested call returns immedia
 
 // console.log(mean(array))
 
-const array = [6, 7, 8, 9, 6, 10, 11]
+// const array = [6, 7, 8, 9, 6, 10, 11]
 
-mode = (arr) => {
-  let obj = []
-  let max = 0
+// mode = (arr) => {
+//   let obj = []
+//   let max = 0
 
-  for (let i = 0; i < arr.length; i++) {
-    if (!obj[arr[i]]) {
-      obj[arr[i]] = 1
-    } else {
-      obj[arr[i]]++
-    }
+//   for (let i = 0; i < arr.length; i++) {
+//     if (!obj[arr[i]]) {
+//       obj[arr[i]] = 1
+//     } else {
+//       obj[arr[i]]++
+//     }
+//   }
+
+//   for (val in obj) {
+//     if (obj[val] > max) {
+//       max = val
+//     }
+//   }
+//   return max
+// }
+
+// console.log(mode(array))
+
+function titles(books) {
+  const result = []
+
+  for (let i = 0; i < books.length; i++) {
+    const book = books[i]
+    const title = book.title
+
+    result.push(title)
   }
-
-  for (val in obj) {
-    if (obj[val] > max) {
-      max = val
-    }
-  }
-  return max
+  return result
 }
 
-console.log(mode(array))
+function titles(books, result = []) {
+  if (result.length < books.length) {
+    result.push(books[result.length].title)
+    return titles(books, result)
+  } else if (result.length === books.length) {
+    return result
+  }
+}
+
+// function lengths (strings) {
+//   const result = []
+
+//   for (let i = 0; i < strings.length; i++) {
+//     const string = strings[i]
+//     result.push(string.length)
+//   }
+
+//   return result
+// }
+
+
+function lengths(strings, result = []) {
+  console.log(result)
+  if (strings.length > result.length) {
+    result.push(strings[result.length].length)
+    return lengths(strings, result)
+  } else if (result.length === strings.length) {
+    return result
+  }
+}
+
+// function saleItems (books) {
+//   const result = []
+
+//   for (let i = 0; i < books.length; i++) {
+//     const book = books[i]
+//     if (book.sale) result.push(book)
+//   }
+
+//   return result
+// }
+
+function saleItems(books, result = []) {
+
+  let index = result.length
+  result.push(books[index].title)
+
+  if (books.length === result.length) {
+    return result
+  }
+  return saleItems(books, result)
+}
+
+saleItems(books)
+
+
+
+function odds(numbers) {
+  const result = []
+
+  for (let i = 0; i < numbers.length; i++) {
+    const number = numbers[i]
+    if (number % 2) result.push(number)
+  }
+
+  return result
+}
+
+function odds(numbers, result = [], index = 0) {
+
+  if (index === numbers.length) {
+    return result
+  }
+
+  if (numbers[index] % 2 !== 0) {
+    result.push(numbers[index])
+  }
+
+  index++
+
+  return odds(numbers, result, index)
+}
+
+odds([2, 3, 4, 5, 6, 7, 8, 9])
+
+function findByTitle(books, bookName) {
+  for (let i = 0; i < books.length; i++) {
+    const book = books[i]
+    if (book.title === bookName) return book
+  }
+
+  return -1
+}
+
+function max(numbers) {
+  let result = numbers[0]
+
+  for (let i = 1; i < numbers.length; i++) {
+    const number = numbers[i]
+    result = number > result ? number : result
+  }
+
+  return result || null
+}
 
 
 
