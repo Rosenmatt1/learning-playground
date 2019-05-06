@@ -701,8 +701,13 @@ var obj = [
   {title: "Jambaree" }
 ]
 
-recursivebooks = () => {
-
+recursivebooks = (books, result = []) => {
+  if (result.length < books.length) {
+    result.push(books[result.length].title)
+    return recursivebooks(books, result)
+  } else if (books.length === result.length) {
+    return result
+  }
 }
 
 console.log(recursivebooks(obj))
@@ -732,7 +737,7 @@ console.log(recursivebooks(obj))
 //   }
 // }
 
-console.log(titles(obj))
+// console.log(titles(obj))
 
 // function lengths (strings) {
 //   const result = []
@@ -829,6 +834,12 @@ console.log(titles(obj))
 
 //   return result || null
 // }
+
+
+// const myObject = {}
+// // myObject.prop = "hello!" // No error
+// myObject = "hello" // Error
+// console.log(myObject)
 
 
 
