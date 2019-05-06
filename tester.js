@@ -701,6 +701,12 @@ var obj = [
   {title: "Jambaree" }
 ]
 
+recursivebooks = () => {
+
+}
+
+console.log(recursivebooks(obj))
+
 // function titles(books) {
 //   const result = []
 
@@ -717,14 +723,14 @@ var obj = [
 
 // console.log(titles(obj))
 
-function titles(books, result = []) {
-  if (result.length < books.length) {
-    result.push(books[result.length].title)
-    return titles(books, result)
-  } else if (result.length === books.length) {
-    return result
-  }
-}
+// function titles(books, result = []) {
+//   if (result.length < books.length) {
+//     result.push(books[result.length].title)
+//     return titles(books, result)
+//   } else if (result.length === books.length) {
+//     return result
+//   }
+// }
 
 console.log(titles(obj))
 
