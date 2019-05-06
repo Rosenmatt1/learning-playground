@@ -701,16 +701,16 @@ var obj = [
   {title: "Jambaree" }
 ]
 
-recursivebooks = (books, result = []) => {
-  if (result.length < books.length) {
-    result.push(books[result.length].title)
-    return recursivebooks(books, result)
-  } else if (books.length === result.length) {
-    return result
-  }
-}
+// recursivebooks = (books, result = []) => {
+//   if (result.length < books.length) {
+//     result.push(books[result.length].title)
+//     return recursivebooks(books, result)
+//   } else if (books.length === result.length) {
+//     return result
+//   }
+// }
 
-console.log(recursivebooks(obj))
+// console.log(recursivebooks(obj))
 
 // function titles(books) {
 //   const result = []
@@ -739,16 +739,16 @@ console.log(recursivebooks(obj))
 
 // console.log(titles(obj))
 
-// function lengths (strings) {
-//   const result = []
+function lengths (strings) {
+  const result = []
 
-//   for (let i = 0; i < strings.length; i++) {
-//     const string = strings[i]
-//     result.push(string.length)
-//   }
+  for (let i = 0; i < strings.length; i++) {
+    const string = strings[i]
+    result.push(string.length)
+  }
 
-//   return result
-// }
+  return result
+}
 
 
 // function lengths(strings, result = []) {
@@ -840,6 +840,23 @@ console.log(recursivebooks(obj))
 // // myObject.prop = "hello!" // No error
 // myObject = "hello" // Error
 // console.log(myObject)
+
+// let array = [[3, 1, 2], [9, 1, 7], [2, 0, 5]]
+
+// const concater = (arr) => {
+//   const result = []
+
+//   arr.map((array, i) => {
+//     let str = ""
+//     for (let i = 0; i < array.length; i++) {
+//       str += array[i]
+//     }
+//     result.push(+str)
+//   })
+//   return result
+// }
+
+// console.log(concater(array))
 
 
 
