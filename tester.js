@@ -858,5 +858,8 @@ function lengths (strings) {
 
 // console.log(concater(array))
 
+const isNaN = x => x !== x
+console.log(isNaN)
+
 
 
