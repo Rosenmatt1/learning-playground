@@ -861,17 +861,26 @@ function lengths (strings) {
 // const isNaN = x => x !== x
 // console.log(isNaN)
 
-var hero = {
-  _name: 'John Doe',
-  getSecretIdentity: function () {
-    return this._name;
-  }
-};
+// var hero = {
+//   _name: 'John Doe',
+//   getSecretIdentity: function () {
+//     return this._name;
+//   }
+// };
 
-var stoleSecretIdentity = hero.getSecretIdentity;
+// var stoleSecretIdentity = hero.getSecretIdentity;
 
-// console.log(stoleSecretIdentity());
-console.log(hero.getSecretIdentity());
+// // console.log(stoleSecretIdentity());
+// console.log(hero.getSecretIdentity());
+
+const square = v => v * v
+const double = v => v * 2
+const addOne = v => v + 1
+const res = pipe(square, double, addOne)
+console.log(res(3)) // 19; 
+addOne(double(square(3)))
+
+React.createRef()
 
 
 
