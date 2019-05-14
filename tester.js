@@ -876,11 +876,11 @@ function lengths (strings) {
 const square = v => v * v
 const double = v => v * 2
 const addOne = v => v + 1
-const res = pipe(square, double, addOne)
-console.log(res(3)) // 19; 
-addOne(double(square(3)))
+// const res = pipe(square, double, addOne)
+// console.log(res(3)) // 19; 
+console.log(addOne(double(square(3))))
 
-React.createRef()
+// React.createRef()
 
 
 
