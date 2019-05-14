@@ -878,9 +878,31 @@ const double = v => v * 2
 const addOne = v => v + 1
 // const res = pipe(square, double, addOne)
 // console.log(res(3)) // 19; 
-console.log(addOne(double(square(3))))
+// console.log(addOne(double(square(3))))
+
+console.log(double(square(3)))
 
 // React.createRef()
 
+var myObject = {
+  property: this,
+  regularFunction: function () {
+    return this
+  },
+  arrowFunction: () => {
+    return this
+  },
+  iife: (function () {
+    return this
+  })()
+}
 
+// console.log(myObject.regularFunction()) // myObject
+console.log(myObject["regularFunction"]()) // my Object
+
+// myObject.property // NOT myObject; lexical `this`
+// myObject.arrowFunction() // NOT myObject; lexical `this`
+// myObject.iife // NOT myObject; lexical `this`
+// const regularFunction = myObject.regularFunction
+// regularFunction() // NOT myObject; lexical `this`
 
