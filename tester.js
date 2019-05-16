@@ -873,32 +873,32 @@ function lengths (strings) {
 // // console.log(stoleSecretIdentity());
 // console.log(hero.getSecretIdentity());
 
-const square = v => v * v
-const double = v => v * 2
-const addOne = v => v + 1
+// const square = v => v * v
+// const double = v => v * 2
+// const addOne = v => v + 1
 // const res = pipe(square, double, addOne)
 // console.log(res(3)) // 19; 
 // console.log(addOne(double(square(3))))
 
-console.log(double(square(3)))
+// console.log(double(square(3)))
 
 // React.createRef()
 
-var myObject = {
-  property: this,
-  regularFunction: function () {
-    return this
-  },
-  arrowFunction: () => {
-    return this
-  },
-  iife: (function () {
-    return this
-  })()
-}
+// var myObject = {
+//   property: this,
+//   regularFunction: function () {
+//     return this
+//   },
+//   arrowFunction: () => {
+//     return this
+//   },
+//   iife: (function () {
+//     return this
+//   })()
+// }
 
-// console.log(myObject.regularFunction()) // myObject
-console.log(myObject["regularFunction"]()) // my Object
+// // console.log(myObject.regularFunction()) // myObject
+// console.log(myObject["regularFunction"]()) // my Object
 
 // myObject.property // NOT myObject; lexical `this`
 // myObject.arrowFunction() // NOT myObject; lexical `this`
@@ -906,3 +906,40 @@ console.log(myObject["regularFunction"]()) // my Object
 // const regularFunction = myObject.regularFunction
 // regularFunction() // NOT myObject; lexical `this`
 
+// let Array = [ 6,5,4]
+// console.log(Array.isArray) // static method of Array
+// console.log(Array.prototype.push) // instance method of Array
+
+// const arr = [1, 2, 3]
+// arr.push(4)
+// console.log(Array.push(arr, 4))
+
+function gameOfThrones(s) {
+  let obj = {}
+  let twoOdds = 0
+
+  for (let i = 0; i < s.length; i++) {
+    if (!obj[s[i]]) {
+      obj[s[i]] = 1
+    } else {
+      obj[s[i]]++
+    }
+  }
+
+  for (let val in obj) {
+    if (obj[val] % 2 !== 0) {
+      twoOdds++
+    }
+  }
+
+  console.log(twoOdds)
+
+  if (twoOdds > 1) {
+    return "NO"
+  } else {
+    return "YES"
+  }
+
+}
+
+console.log(gameOfThrones("cdcdcdcdeeeef"))
