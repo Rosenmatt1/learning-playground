@@ -914,32 +914,47 @@ function lengths (strings) {
 // arr.push(4)
 // console.log(Array.push(arr, 4))
 
-function gameOfThrones(s) {
-  let obj = {}
-  let twoOdds = 0
+// function gameOfThrones(s) {
+//   let obj = {}
+//   let twoOdds = 0
 
-  for (let i = 0; i < s.length; i++) {
-    if (!obj[s[i]]) {
-      obj[s[i]] = 1
-    } else {
-      obj[s[i]]++
-    }
+//   for (let i = 0; i < s.length; i++) {
+//     if (!obj[s[i]]) {
+//       obj[s[i]] = 1
+//     } else {
+//       obj[s[i]]++
+//     }
+//   }
+
+//   for (let val in obj) {
+//     if (obj[val] % 2 !== 0) {
+//       twoOdds++
+//     }
+//   }
+
+//   console.log(twoOdds)
+
+//   if (twoOdds > 1) {
+//     return "NO"
+//   } else {
+//     return "YES"
+//   }
+
+// }
+
+// console.log(gameOfThrones("cdcdcdcdeeeef"))
+
+function extraLongFactorials(n) {
+  var result = n
+
+  // if (n === 0 || n === 1)
+  //     return 1
+
+  while (n > 1) {
+    n--
+    result *= n // or result *= num; 
   }
-
-  for (let val in obj) {
-    if (obj[val] % 2 !== 0) {
-      twoOdds++
-    }
-  }
-
-  console.log(twoOdds)
-
-  if (twoOdds > 1) {
-    return "NO"
-  } else {
-    return "YES"
-  }
-
+  return result
 }
 
-console.log(gameOfThrones("cdcdcdcdeeeef"))
+console.log(extraLongFactorials(25))
