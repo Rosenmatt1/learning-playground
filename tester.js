@@ -944,17 +944,29 @@ function lengths (strings) {
 
 // console.log(gameOfThrones("cdcdcdcdeeeef"))
 
-function extraLongFactorials(n) {
-  var result = n
+// function extraLongFactorials(n) {
+//   var result = n
 
-  // if (n === 0 || n === 1)
-  //     return 1
+//   if (n === 0 || n === 1)
+//     return 1
 
-  while (n > 1) {
-    n--
-    result *= n // or result *= num; 
+//   while (n > 1) {
+//     n--
+//     result *= n // or result *= num; 
+//   }
+//   return result
+// }
+
+// console.log(extraLongFactorials(25))
+
+function factorialize(num) {
+  if (num < 0)
+    return -1;
+  else if (num == 0)
+    return 1;
+  else {
+    return (num * factorialize(num - 1));
   }
-  return result
 }
 
-console.log(extraLongFactorials(25))
+console.log(factorialize(5))
