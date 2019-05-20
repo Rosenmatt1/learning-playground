@@ -959,14 +959,36 @@ function lengths (strings) {
 
 // console.log(extraLongFactorials(25))
 
-function factorialize(num) {
-  if (num < 0)
-    return -1;
-  else if (num == 0)
-    return 1;
-  else {
-    return (num * factorialize(num - 1));
+// function factorialize(num) {
+//   if (num < 0)
+//     return -1;
+//   else if (num == 0)
+//     return 1;
+//   else {
+//     return (num * factorialize(num - 1));
+//   }
+// }
+
+// console.log(factorialize(5))
+
+let array1 = [1, 2, 3]
+let array2 = [4, 5, 6]
+
+sumArray = (a, b) => {
+  let result = []
+  let first = 0
+  let second = 0
+
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] > b[i]) {
+      first++
+    } else if (a[i] < b[i]) {
+      second++
+    }
   }
+
+  result = [first, second]
+  return result
 }
 
-console.log(factorialize(5))
+console.log(sumArray(array1, array2))
