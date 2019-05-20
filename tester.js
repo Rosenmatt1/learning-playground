@@ -971,24 +971,47 @@ function lengths (strings) {
 
 // console.log(factorialize(5))
 
-let array1 = [1, 2, 3]
-let array2 = [4, 5, 6]
+// let array1 = [1, 2, 3]
+// let array2 = [4, 5, 6]
 
-sumArray = (a, b) => {
-  let result = []
-  let first = 0
-  let second = 0
+// sumArray = (a, b) => {
+//   let result = []
+//   let first = 0
+//   let second = 0
 
-  for (let i = 0; i < a.length; i++) {
-    if (a[i] > b[i]) {
-      first++
-    } else if (a[i] < b[i]) {
-      second++
+//   for (let i = 0; i < a.length; i++) {
+//     if (a[i] > b[i]) {
+//       first++
+//     } else if (a[i] < b[i]) {
+//       second++
+//     }
+//   }
+
+//   result = [first, second]
+//   return result
+// }
+
+// console.log(sumArray(array1, array2))
+
+function countingValleys(n, s) {
+  let count = 0
+  let valleys = 0
+
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] === "D") {
+      count--
+    } else {
+      count++
     }
-  }
+    console.log(count)
 
-  result = [first, second]
-  return result
+    if (count <= -2) {
+      valleys++
+      console.log(valleys)
+    }
+
+  }
+  return valleys
 }
 
-console.log(sumArray(array1, array2))
+console.log(countingValleys(8, "DUDDUUD"))
