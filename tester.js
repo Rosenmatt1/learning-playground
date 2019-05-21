@@ -1059,14 +1059,28 @@ function lengths (strings) {
 // // console.log(catAndMouse(1, 2, 3))
 // console.log(catAndMouse(1, 3, 2))
 
-function aVeryBigSum(ar) {
-  let result = 0
+// function aVeryBigSum(ar) {
+//   let result = 0
 
-  for (let i = 0; i < ar.length; i++) {
-    result += ar[i]
+//   for (let i = 0; i < ar.length; i++) {
+//     result += ar[i]
+//   }
+//   return result
+// }
+
+let array = [1,2,3,4,5,6,7,8,9]
+
+odds = (numbers) => {
+  const result = []
+
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2) result.push(numbers[i])
   }
+
   return result
 }
+
+console.log(odds(array))
 
 
 
