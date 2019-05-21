@@ -993,25 +993,52 @@ function lengths (strings) {
 
 // console.log(sumArray(array1, array2))
 
-function countingValleys(n, s) {
-  let count = 0
-  let valleys = 0
+// function countingValleys(n, s) {
+//   let count = 0
+//   let valleys = 0
 
-  for (let i = 0; i < s.length; i++) {
-    if (s[i] === "D") {
-      count--
+//   for (let i = 0; i < s.length; i++) {
+//     if (s[i] === "D") {
+//       count--
+//     } else {
+//       count++
+//     }
+//     console.log(count)
+
+//     if (count <= -2) {
+//       valleys++
+//       console.log(valleys)
+//     }
+
+//   }
+//   return valleys
+// }
+
+// console.log(countingValleys(8, "DUDDUUD"))
+
+let array = [1, -1, 1, -1, 0]
+
+function plusMinus(arr) {
+  let positives = 0
+  let negatives = 0
+  let zeros = 0
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 0) {
+      positives++
+    } else if (arr[i] < 0) {
+      negatives++
     } else {
-      count++
+      zeros++
     }
-    console.log(count)
-
-    if (count <= -2) {
-      valleys++
-      console.log(valleys)
-    }
-
   }
-  return valleys
+
+  positives = positives / arr.length
+  negatives = negatives / arr.length
+  zeros = zeros / arr.length
+  console.log(positives)
+  console.log(negatives)
+  console.log(zeros)
 }
 
-console.log(countingValleys(8, "DUDDUUD"))
+console.log(plusMinus(array))
