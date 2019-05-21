@@ -1016,29 +1016,47 @@ function lengths (strings) {
 
 // console.log(countingValleys(8, "DUDDUUD"))
 
-let array = [1, -1, 1, -1, 0]
+// let array = [1, -1, 1, -1, 0]
 
-function plusMinus(arr) {
-  let positives = 0
-  let negatives = 0
-  let zeros = 0
+// function plusMinus(arr) {
+//   let positives = 0
+//   let negatives = 0
+//   let zeros = 0
 
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > 0) {
-      positives++
-    } else if (arr[i] < 0) {
-      negatives++
-    } else {
-      zeros++
-    }
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > 0) {
+//       positives++
+//     } else if (arr[i] < 0) {
+//       negatives++
+//     } else {
+//       zeros++
+//     }
+//   }
+
+//   positives = positives / arr.length
+//   negatives = negatives / arr.length
+//   zeros = zeros / arr.length
+//   console.log(positives)
+//   console.log(negatives)
+//   console.log(zeros)
+// }
+
+// console.log(plusMinus(array))
+
+
+function catAndMouse(x, y, z) {
+  let catA = Math.abs(z - x)
+  let catB = Math.abs(z - y)
+
+  if (catA > catB) {
+    return "Cat B"
+  } else if (catB > catA) {
+    return "Cat A"
+  } else {
+    return "Mouse C"
   }
-
-  positives = positives / arr.length
-  negatives = negatives / arr.length
-  zeros = zeros / arr.length
-  console.log(positives)
-  console.log(negatives)
-  console.log(zeros)
 }
 
-console.log(plusMinus(array))
+// console.log(catAndMouse(1, 2, 3))
+console.log(catAndMouse(1, 3, 2))
+
