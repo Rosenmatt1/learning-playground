@@ -1068,16 +1068,35 @@ function lengths (strings) {
 //   return result
 // }
 
+// odds = (numbers) => {
+//   const result = []
+
+//   for (let i = 0; i < numbers.length; i++) {
+//     if (numbers[i] % 2) result.push(numbers[i])
+//   }
+
+//   return result
+// }
+
+// console.log(odds(array))
+
 let array = [1,2,3,4,5,6,7,8,9]
 
-odds = (numbers) => {
-  const result = []
+odds = (arr, result = [], index = 0) => {
 
-  for (let i = 0; i < numbers.length; i++) {
-    if (numbers[i] % 2) result.push(numbers[i])
+  // console.log("index", index)
+
+  if (index === arr.length - 1) return result 
+
+  if (arr[index] % 2 !== 0) {
+    result.push(arr[index])
   }
 
-  return result
+  // console.log(result)
+
+  index++
+
+  return odds(arr, result, index)
 }
 
 console.log(odds(array))
