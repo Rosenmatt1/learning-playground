@@ -1080,26 +1080,52 @@ function lengths (strings) {
 
 // console.log(odds(array))
 
-let array = [1,2,3,4,5,6,7,8,9]
+// let array = [1,2,3,4,5,6,7,8,9]
 
-odds = (arr, result = [], index = 0) => {
+// odds = (arr, result = [], index = 0) => {
 
-  // console.log("index", index)
+//   // console.log("index", index)
 
-  if (index === arr.length - 1) return result 
+//   if (index === arr.length - 1) return result 
 
-  if (arr[index] % 2 !== 0) {
-    result.push(arr[index])
+//   if (arr[index] % 2 !== 0) {
+//     result.push(arr[index])
+//   }
+
+//   // console.log(result)
+
+//   index++
+
+//   return odds(arr, result, index)
+// }
+
+// console.log(odds(array))
+
+let boards = [4, 6, 9]
+let drive = [2, 3, 4]
+let budget = 10
+
+function getMoneySpent(keyboards, drives, b) {
+  var sum;
+  var max = 0;
+
+  for (var i = 0; i < keyboards.length; i++) {
+    for (var j = 0; j < drives.length; j++) {
+      sum = keyboards[i] + drives[j];
+      console.log("sum", sum)
+      if (sum > max && sum <= b) {
+        max = sum;
+        console.log("max", max)
+      }
+    }
   }
 
-  // console.log(result)
-
-  index++
-
-  return odds(arr, result, index)
+  if (max === 0)
+    max = -1;
+  console.log(max);
 }
 
-console.log(odds(array))
+console.log(getMoneySpent(boards, drive, budget))
 
 
 
