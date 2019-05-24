@@ -1101,31 +1101,56 @@ function lengths (strings) {
 
 // console.log(odds(array))
 
-let boards = [4, 6, 9]
-let drive = [2, 3, 4]
-let budget = 10
+// let boards = [4, 6, 9]
+// let drive = [2, 3, 4]
+// let budget = 10
 
-function getMoneySpent(keyboards, drives, b) {
-  var sum;
-  var max = 0;
+// function getMoneySpent(keyboards, drives, b) {
+//   var sum;
+//   var max = 0;
 
-  for (var i = 0; i < keyboards.length; i++) {
-    for (var j = 0; j < drives.length; j++) {
-      sum = keyboards[i] + drives[j];
-      console.log("sum", sum)
-      if (sum > max && sum <= b) {
-        max = sum;
-        console.log("max", max)
+//   for (var i = 0; i < keyboards.length; i++) {
+//     for (var j = 0; j < drives.length; j++) {
+//       sum = keyboards[i] + drives[j];
+//       console.log("sum", sum)
+//       if (sum > max && sum <= b) {
+//         max = sum;
+//         console.log("max", max)
+//       }
+//     }
+//   }
+
+//   if (max === 0)
+//     max = -1;
+//   console.log(max);
+// }
+
+// console.log(getMoneySpent(boards, drive, budget))
+
+let array = [6, 4, 1]
+
+function countSwaps(a) {
+  let numSwaps = 0
+
+  swap = (first, second) => {
+    let temp = first
+    let first = second
+    let second = temp
+
+  }
+
+  for (let i = 0; i < a.length; i++) {
+    for (let j = 0; j < a.length - 1; j++) {
+      // Swap adjacent elements if they are in decreasing order
+      if (a[j] > a[j + 1]) {
+        swap(a[j], a[j + 1])
+        numSwaps++
       }
     }
   }
 
-  if (max === 0)
-    max = -1;
-  console.log(max);
-}
+  console.log(countSwaps(array))
 
-console.log(getMoneySpent(boards, drive, budget))
 
 
 
