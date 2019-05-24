@@ -1164,7 +1164,8 @@ function isValid(s) {
     }
   }
 
-  console.log(obj)
+  let total = Object.values(obj)
+  console.log(total)
 
 }
 
