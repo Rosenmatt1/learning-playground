@@ -1127,29 +1127,48 @@ function lengths (strings) {
 
 // console.log(getMoneySpent(boards, drive, budget))
 
-let array = [6, 4, 1]
+// let arr = [6, 4, 1]
 
-function countSwaps(a) {
-  let numSwaps = 0
+// const swap = (arr, idx1, idx2) => {
+//   const tmp = arr[idx1]
+//   arr[idx1] = arr[idx2]
+//   arr[idx2] = tmp
+// }
 
-  swap = (first, second) => {
-    let temp = first
-    let first = second
-    let second = temp
+// function selectionSort(array) {
+//   let numSwap = 0
 
-  }
+//   for (let i = 0; i < array.length; i++) {
+//     for (let j = 0; j < array.length; j++) {
+//       if (array[j] > array[j + 1]) {
+//         swap(array, j, j + 1)
+//         numSwap++
+//       }
+//     }
+//   }
+//   return numSwap
+// }
 
-  for (let i = 0; i < a.length; i++) {
-    for (let j = 0; j < a.length - 1; j++) {
-      // Swap adjacent elements if they are in decreasing order
-      if (a[j] > a[j + 1]) {
-        swap(a[j], a[j + 1])
-        numSwaps++
-      }
+// console.log(selectionSort(arr))
+
+let string = "eifaeifatj"
+
+function isValid(s) {
+  let obj = {}
+
+  for (let i = 0; i < s.length; i++) {
+    if (!obj[s[i]]) {
+      obj[s[i]] = 1
+    } else {
+      obj[s[i]]++
     }
   }
 
-  console.log(countSwaps(array))
+  console.log(obj)
+
+}
+
+console.log(isValid(string))
 
 
 
