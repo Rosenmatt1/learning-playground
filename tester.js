@@ -1151,25 +1151,38 @@ function lengths (strings) {
 
 // console.log(selectionSort(arr))
 
-let string = "eifaeifatj"
+// let string = "eifaeifatj"
 
-function isValid(s) {
-  let obj = {}
+// function isValid(s) {
+//   let obj = {}
 
-  for (let i = 0; i < s.length; i++) {
-    if (!obj[s[i]]) {
-      obj[s[i]] = 1
-    } else {
-      obj[s[i]]++
-    }
-  }
+//   for (let i = 0; i < s.length; i++) {
+//     if (!obj[s[i]]) {
+//       obj[s[i]] = 1
+//     } else {
+//       obj[s[i]]++
+//     }
+//   }
 
-  let total = Object.values(obj)
-  console.log(total)
+//   for (let key in obj) {
+//     if (obj[key] === obj[key + 1]) {
+//       return "YES"
+//     }
+//   }
+//   return "NO"
+
+// }
+
+// console.log(isValid(string))
+
+let array = [1, 2, 3, 4, 5]
+
+function rotLeft(a, d) {
+  
 
 }
 
-console.log(isValid(string))
+console.log(rotLeft(array, 2))
 
 
 
