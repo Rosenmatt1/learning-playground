@@ -1178,15 +1178,21 @@ function lengths (strings) {
 let array = [1, 2, 3, 4, 5]
 
 function rotLeft(a, d) {
+  let result = ""
+
   for (let i = 0; i < d; i++) {
     a.push(a[i])
   }
 
   for (let i = 0; i < d; i++) {
-    //     console.log(a[i])
     a.shift()
   }
-  console.log(a)
+
+  for (let i = 0; i < a.length; i++) {
+    result += a[i] + " "
+  }
+
+  console.log(result)
 
 }
 
