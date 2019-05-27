@@ -695,10 +695,10 @@ The method hits the if condition and the most highly nested call returns immedia
 
 // console.log(mode(array))
 
-var obj = [ 
-  {title: "castaway"},
-  {title: "Living Legends"},
-  {title: "Jambaree" }
+var obj = [
+  { title: "castaway" },
+  { title: "Living Legends" },
+  { title: "Jambaree" }
 ]
 
 // recursivebooks = (books, result = []) => {
@@ -739,7 +739,7 @@ var obj = [
 
 // console.log(titles(obj))
 
-function lengths (strings) {
+function lengths(strings) {
   const result = []
 
   for (let i = 0; i < strings.length; i++) {
@@ -1198,30 +1198,44 @@ function lengths (strings) {
 
 // console.log(rotLeft(array, 2))
 
-let string = "(){(}]{"
+// let string = "[(])"
+let string = "ABCD"
 
-function validBraces(braces) {
-  let paren = 0
-  let bracket = 0
-  let curly = 0
+const NestedString = (str) => {
+  let decrementor = str.length -1
 
-  for (let i = 0; i < braces.length; i++) {
-    if (braces[i] === "(" || braces[i] === ")" ) {
-      paren++
-    } else if (braces[i] === "[" || braces[i] === "]") {
-      bracket++
-    } else if (braces[i] === "{" || braces[i] === "}") {
-      curly++
+  for (let i = 0; i < str.length; i++) {
+      console.log("str[i]", str[i])
+    for (let j = 0; j < str.length; j++) {
+      console.log("str[j]", str[j])
     }
   }
-
-  if (paren % 2 !== 0 || bracket % 2 !== 0 || curly % 2 !== 0){
-    return false
-  }
-  return true 
 }
 
-validBraces(string)
+console.log(NestedString(string))
+
+// function validBraces(braces) {
+//   let paren = 0
+//   let bracket = 0
+//   let curly = 0
+
+//   for (let i = 0; i < braces.length; i++) {
+//     if (braces[i] === "(" || braces[i] === ")" ) {
+//       paren++
+//     } else if (braces[i] === "[" || braces[i] === "]") {
+//       bracket++
+//     } else if (braces[i] === "{" || braces[i] === "}") {
+//       curly++
+//     }
+//   }
+
+//   if (paren % 2 !== 0 || bracket % 2 !== 0 || curly % 2 !== 0){
+//     return false
+//   }
+//   return true 
+// }
+
+// console.log(validBraces(string))
 
 
 
