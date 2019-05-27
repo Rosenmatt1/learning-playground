@@ -1175,29 +1175,33 @@ function lengths (strings) {
 
 // console.log(isValid(string))
 
-let array = [1, 2, 3, 4, 5]
+// let array = [1, 2, 3, 4, 5]
 
-function rotLeft(a, d) {
-  let result = ""
+// function rotLeft(a, d) {
+//   let result = ""
 
-  for (let i = 0; i < d; i++) {
-    a.push(a[i])
-  }
+//   for (let i = 0; i < d; i++) {
+//     a.push(a[i])
+//   }
 
-  for (let i = 0; i < d; i++) {
-    a.shift()
-  }
+//   for (let i = 0; i < d; i++) {
+//     a.shift()
+//   }
 
-  for (let i = 0; i < a.length; i++) {
-    result += a[i] + " "
-  }
+//   for (let i = 0; i < a.length; i++) {
+//     result += a[i] + " "
+//   }
 
-  console.log(result)
+//   console.log(result)
 
+// }
+
+// console.log(rotLeft(array, 2))
+
+
+function validBraces(braces) {
+  //TODO 
 }
-
-console.log(rotLeft(array, 2))
-
 
 
 
