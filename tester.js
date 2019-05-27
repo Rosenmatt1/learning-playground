@@ -1198,10 +1198,23 @@ function lengths (strings) {
 
 // console.log(rotLeft(array, 2))
 
+let string = "(){(}]{"
 
 function validBraces(braces) {
-  //TODO 
+  let paren = 0
+  let bracket = 0
+  let curly = 0
+
+  for (let i = 0; i < braces.length; i++) {
+    if (braces[i] === "(" || braces[i] === ")" ) {
+      paren++
+    }
+  }
+
+  console.log(paren)
 }
+
+validBraces(string)
 
 
 
