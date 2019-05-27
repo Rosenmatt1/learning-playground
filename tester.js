@@ -1210,10 +1210,15 @@ function validBraces(braces) {
       paren++
     } else if (braces[i] === "[" || braces[i] === "]") {
       bracket++
+    } else if (braces[i] === "{" || braces[i] === "}") {
+      curly++
     }
   }
 
-  console.log(bracket)
+  if (paren % 2 !== 0 || bracket % 2 !== 0 || curly % 2 !== 0){
+    return false
+  }
+  return true 
 }
 
 validBraces(string)
