@@ -1208,10 +1208,12 @@ function validBraces(braces) {
   for (let i = 0; i < braces.length; i++) {
     if (braces[i] === "(" || braces[i] === ")" ) {
       paren++
+    } else if (braces[i] === "[" || braces[i] === "]") {
+      bracket++
     }
   }
 
-  console.log(paren)
+  console.log(bracket)
 }
 
 validBraces(string)
