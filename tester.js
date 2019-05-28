@@ -1207,8 +1207,8 @@ let string = "(){}[]"   //=> True
 // let string = "ABCD"
 
 const NestedString = (str) => {
-  // let decrementor = str.length -1
-  // let middle = str.length/2
+  let decrementor = str.length -1
+  let middle = str.length/2
   let index = 0
 
   if (str[0] === "(" && str[index + 1] === ")") {
@@ -1227,30 +1227,23 @@ const NestedString = (str) => {
   }
 
   // console.log("outside", str)
+  if (str.length > 1) {
+    return NestedString(str)
+  }
 
-  // if (newStr[0] === "(" && newStr[index + 1] === ")") {
-  //   newStr = str.slice(str.indexOf(newStr[2]))
-  //   // console.log("inside", newStr)
-  // }
+  if (str.length === 0) {
+    return true 
+  }
+  return false
 
-  return NestedString(str)
-
-  // // console.log(middle)
-  // while (index < str.length)
-  //   if (str[0] === "(" && str[index + 1] === ")") {
-  //     newStr = str.slice(str.indexOf(2))
-  //     index += 2
-  //     console.log(newStr)
-  //   }
-  
-  // for (let i = 0; i < middle; i++) {
+  //  for (let i = 0; i < middle; i++) {
   //     // console.log("str[i]", str[i])
   //   if (str[i] !== str[decrementor]) {
   //     console.log(str[i])
   //     console.log(str[decrementor])
   //     return true
   //   }
-    
+
   //   if (decrementor > middle) decrementor--
   //     //  console.log(decrementor)
   // }
