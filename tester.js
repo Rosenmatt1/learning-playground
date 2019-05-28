@@ -1277,10 +1277,16 @@ function lengths(strings) {
 // console.log(1 < 2 < 3);
 // console.log(3 > 2 > 1);
 
-var myArray = ['a', 'b', 'c', 'd'];
-myArray.push('end');
-myArray.unshift('start');
-console.log(myArray); // ["start", "a", "b", "c", "d", "end"]
+// var myArray = ['a', 'b', 'c', 'd'];
+// myArray.push('end');
+// myArray.unshift('start');
+// console.log(myArray); // ["start", "a", "b", "c", "d", "end"]
+
+var a = [1, 2, 3]
+
+a[10] = 99
+
+console.log(a)
 
 
 
