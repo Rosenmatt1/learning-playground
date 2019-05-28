@@ -1198,18 +1198,63 @@ function lengths(strings) {
 
 // console.log(rotLeft(array, 2))
 
+let string = "(){}[]"   //=> True
+// let string = "([{}])"   //=> True
+// let string = "(}"       //=> False
+// let string = "[(])"    // => False
+// let string = "[({})](]" //=> False
 // let string = "[(])"
-let string = "ABCD"
+// let string = "ABCD"
 
 const NestedString = (str) => {
-  let decrementor = str.length -1
+  // let decrementor = str.length -1
+  // let middle = str.length/2
+  let index = 0
 
-  for (let i = 0; i < str.length; i++) {
-      console.log("str[i]", str[i])
-    for (let j = 0; j < str.length; j++) {
-      console.log("str[j]", str[j])
-    }
+  if (str[0] === "(" && str[index + 1] === ")") {
+    str = str.slice(str.indexOf(str[2]))
+    console.log("inside", str)
   }
+
+  if (str[0] === "{" && str[index + 1] === "}") {
+    str = str.slice(str.indexOf(str[2]))
+    console.log("inside", str)
+  }
+
+  if (str[0] === "[" && str[index + 1] === "]") {
+    str = str.slice(str.indexOf(str[2]))
+    console.log("inside", str)
+  }
+
+  // console.log("outside", str)
+
+  // if (newStr[0] === "(" && newStr[index + 1] === ")") {
+  //   newStr = str.slice(str.indexOf(newStr[2]))
+  //   // console.log("inside", newStr)
+  // }
+
+  return NestedString(str)
+
+  // // console.log(middle)
+  // while (index < str.length)
+  //   if (str[0] === "(" && str[index + 1] === ")") {
+  //     newStr = str.slice(str.indexOf(2))
+  //     index += 2
+  //     console.log(newStr)
+  //   }
+  
+  // for (let i = 0; i < middle; i++) {
+  //     // console.log("str[i]", str[i])
+  //   if (str[i] !== str[decrementor]) {
+  //     console.log(str[i])
+  //     console.log(str[decrementor])
+  //     return true
+  //   }
+    
+  //   if (decrementor > middle) decrementor--
+  //     //  console.log(decrementor)
+  // }
+  // return true
 }
 
 console.log(NestedString(string))
