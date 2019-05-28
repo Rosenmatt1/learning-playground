@@ -1198,59 +1198,58 @@ function lengths(strings) {
 
 // console.log(rotLeft(array, 2))
 
-let string = "(){}[]"   //=> True
-// let string = "([{}])"   //=> True
-// let string = "(}"       //=> False
-// let string = "[(])"    // => False
-// let string = "[({})](]" //=> False
-// let string = "[(])"
-// let string = "ABCD"
+// let string = "(){}[]"   //=> True
+// // let string = "([{}])"   //=> True
+// // let string = "(}"       //=> False
+// // let string = "[(])"    // => False
+// // let string = "[({})](]" //=> False
+// // let string = "[(])" 
+// // let string = "ABCD"
 
-const NestedString = (str) => {
-  let decrementor = str.length -1
-  let middle = str.length/2
-  let index = 0
+// const NestedString = (str) => {
+//   let decrementor = str.length -1
+//   let middle = str.length/2
 
-  if (str[0] === "(" && str[index + 1] === ")") {
-    str = str.slice(str.indexOf(str[2]))
-    console.log("inside", str)
-  }
+//   if (str[0] === "(" && str[1] === ")") {
+//     str = str.slice(str.indexOf(str[2]))
+//     console.log("inside", str)
+//   }
 
-  if (str[0] === "{" && str[index + 1] === "}") {
-    str = str.slice(str.indexOf(str[2]))
-    console.log("inside", str)
-  }
+//   if (str[0] === "{" && str[1] === "}") {
+//     str = str.slice(str.indexOf(str[2]))
+//     console.log("inside", str)
+//   }
 
-  if (str[0] === "[" && str[index + 1] === "]") {
-    str = str.slice(str.indexOf(str[2]))
-    console.log("inside", str)
-  }
+//   if (str[0] === "[" && str[1] === "]") {
+//     str = str.slice(str.indexOf(str[2]))
+//     console.log("inside", str)
+//   }
 
-  // console.log("outside", str)
-  if (str.length > 1) {
-    return NestedString(str)
-  }
+//   // console.log("outside", str)
+//   if (str.length > 1) {
+//     return NestedString(str)
+//   }
 
-  if (str.length === 0) {
-    return true 
-  }
-  return false
+//   if (str.length === 0) {
+//     return true 
+//   }
+//   return false
 
-  //  for (let i = 0; i < middle; i++) {
-  //     // console.log("str[i]", str[i])
-  //   if (str[i] !== str[decrementor]) {
-  //     console.log(str[i])
-  //     console.log(str[decrementor])
-  //     return true
-  //   }
+//   //  for (let i = 0; i < middle; i++) {
+//   //     // console.log("str[i]", str[i])
+//   //   if (str[i] !== str[decrementor]) {
+//   //     console.log(str[i])
+//   //     console.log(str[decrementor])
+//   //     return true
+//   //   }
 
-  //   if (decrementor > middle) decrementor--
-  //     //  console.log(decrementor)
-  // }
-  // return true
-}
+//   //   if (decrementor > middle) decrementor--
+//   //     //  console.log(decrementor)
+//   // }
+//   // return true
+// }
 
-console.log(NestedString(string))
+// console.log(NestedString(string))
 
 // function validBraces(braces) {
 //   let paren = 0
@@ -1274,6 +1273,9 @@ console.log(NestedString(string))
 // }
 
 // console.log(validBraces(string))
+
+// console.log(1 < 2 < 3);
+console.log(3 > 2 > 1);
 
 
 
