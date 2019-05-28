@@ -1282,11 +1282,21 @@ function lengths(strings) {
 // myArray.unshift('start');
 // console.log(myArray); // ["start", "a", "b", "c", "d", "end"]
 
-var a = [1, 2, 3]
+// var a = [1, 2, 3]
 
-a[10] = 99
+// a[10] = 99
 
-console.log(a)
+// // for (let i = 0; i < a.length; i++) {
+// //   console.log(a[i])
+// // }
+
+// console.log(a[6])
+
+// console.log(typeof undefined == typeof null)
+
+console.log(typeof 1);
+
+console.log(typeof typeof 1);
 
 
 
