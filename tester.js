@@ -1318,7 +1318,7 @@ function lengths(strings) {
 let string = "boontaanluun"
 
 getCount = (str) => {
-  let count = str.replace(/[^aeiou]/gi, '').length;
+  let count = str.match(/[aeiou]/gi, '').length;
   return count
 }
 
