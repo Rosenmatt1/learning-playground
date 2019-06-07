@@ -1315,14 +1315,32 @@ function lengths(strings) {
 // outer();
 // console.log(b)
 
-let string = "boontaanluun"
+// let string = "boontaanluun"
 
-getCount = (str) => {
-  let count = str.match(/[aeiou]/gi, '').length;
-  return count
+// getCount = (str) => {
+//   let count = str.match(/[aeiou]/gi, '').length;
+//   return count
+// }
+
+// console.log(getCount(string))
+
+let string = "the-stealth-warrior"
+
+function toCamelCase(str) {
+  let newStr = ""
+
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === "-" || str[i] === "_") {
+      newStr += ""
+      newStr += str[i + 1].toUpperCase()
+    } else {
+      newStr += str[i]
+    }
+  }
+  return newStr
 }
 
-console.log(getCount(string))
+console.log(toCamelCase(string))
 
 
 
