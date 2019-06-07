@@ -1332,7 +1332,7 @@ function toCamelCase(str) {
   for (let i = 0; i < str.length; i++) {
     if (str[i] === "-" || str[i] === "_") {
       newStr += ""
-      newStr += str[i + 1].toUpperCase()
+      // newStr += str[i + 1].toUpperCase()
     } else {
       newStr += str[i]
     }
@@ -1341,6 +1341,10 @@ function toCamelCase(str) {
 }
 
 console.log(toCamelCase(string))
+
+var camelCased = string.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase(); });
+
+console.log(camelCased)
 
 
 
