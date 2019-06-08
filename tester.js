@@ -1,26 +1,26 @@
-let ints = [1, 1, 1, -2, -2, 5, 7, 5]
+// let ints = [1, 1, 1, -2, -2, 5, 7, 5]
 
-function sumConsecutives(s) {
-  let array = []
-  let temp = 0
+// function sumConsecutives(s) {
+//   let array = []
+//   let temp = 0
 
-  for (let i = 0; i < s.length; i++) {
+//   for (let i = 0; i < s.length; i++) {
 
-    if (s[i] === s[i + 1]) {
-      temp += s[i]
-    } else if (s[i] !== s[i - 1]) {
-      temp += s[i - 1]
-      console.log(temp)
-      array.push(temp)
-      temp = 0
-    } else {
-      array.push(s[i])
-    }
-  }
-  return array
-}
+//     if (s[i] === s[i + 1]) {
+//       temp += s[i]
+//     } else if (s[i] !== s[i - 1]) {
+//       temp += s[i - 1]
+//       console.log(temp)
+//       array.push(temp)
+//       temp = 0
+//     } else {
+//       array.push(s[i])
+//     }
+//   }
+//   return array
+// }
 
-console.log(sumConsecutives(ints))
+// console.log(sumConsecutives(ints))
 
 // example that shows that null is technically an object
 
@@ -719,11 +719,11 @@ The method hits the if condition and the most highly nested call returns immedia
 
 // console.log(mode(array))
 
-var obj = [
-  { title: "castaway" },
-  { title: "Living Legends" },
-  { title: "Jambaree" }
-]
+// var obj = [
+//   { title: "castaway" },
+//   { title: "Living Legends" },
+//   { title: "Jambaree" }
+// ]
 
 // recursivebooks = (books, result = []) => {
 //   if (result.length < books.length) {
@@ -763,16 +763,16 @@ var obj = [
 
 // console.log(titles(obj))
 
-function lengths(strings) {
-  const result = []
+// function lengths(strings) {
+//   const result = []
 
-  for (let i = 0; i < strings.length; i++) {
-    const string = strings[i]
-    result.push(string.length)
-  }
+//   for (let i = 0; i < strings.length; i++) {
+//     const string = strings[i]
+//     result.push(string.length)
+//   }
 
-  return result
-}
+//   return result
+// }
 
 
 // function lengths(strings, result = []) {
@@ -1371,6 +1371,9 @@ function lengths(strings) {
 // var camelCased = string.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase(); });
 
 // console.log(camelCased)
+
+// let number = "501abcdeg"
+// console.log(parseFloat())
 
 
 
