@@ -1,3 +1,27 @@
+let ints = [1, 1, 1, -2, -2, 5, 7, 5]
+
+function sumConsecutives(s) {
+  let array = []
+  let temp = 0
+
+  for (let i = 0; i < s.length; i++) {
+
+    if (s[i] === s[i + 1]) {
+      temp += s[i]
+    } else if (s[i] !== s[i - 1]) {
+      temp += s[i - 1]
+      console.log(temp)
+      array.push(temp)
+      temp = 0
+    } else {
+      array.push(s[i])
+    }
+  }
+  return array
+}
+
+console.log(sumConsecutives(ints))
+
 // example that shows that null is technically an object
 
 // var bar = null;
@@ -1324,25 +1348,25 @@ function lengths(strings) {
 
 // console.log(getCount(string))
 
-let string = "the-stealth-warrior"
+// let string = "the-stealth-warrior"
 
-function toCamelCase(str) {
-  let newStr = ""
+// function toCamelCase(str) {
+//   let newStr = ""
 
-  for (let i = 0; i < str.length; i++) {
-    if (str[i - 1] === "-" || str[i - 1] === "_") continue
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i - 1] === "-" || str[i - 1] === "_") continue
 
-    if (str[i] === "-" || str[i] === "_") {
-      newStr += ""
-      newStr += str[i + 1].toUpperCase()
-    } else {
-      newStr += str[i]
-    }
-  }
-  return newStr
-}
+//     if (str[i] === "-" || str[i] === "_") {
+//       newStr += ""
+//       newStr += str[i + 1].toUpperCase()
+//     } else {
+//       newStr += str[i]
+//     }
+//   }
+//   return newStr
+// }
 
-console.log(toCamelCase(string))
+// console.log(toCamelCase(string))
 
 // var camelCased = string.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase(); });
 
