@@ -1375,53 +1375,96 @@ The method hits the if condition and the most highly nested call returns immedia
 // let number = "501abcdeg"
 // console.log(parseFloat())
 
+// function looseChange(cents) {
+//   let obj = { 'Nickels': 0, 'Pennies': 0, 'Dimes': 0, 'Quarters': 0 }
+//   let quarters = 0
+//   let afterQuarters = 0
+//   let dimes = 0
+//   let afterDimes = 0
+//   let nickels = 0
+//   let afterNickels = 0
+//   let pennies = 0
+
+//   if (cents <= 0) {
+//     return obj
+//   }
+
+//   roundedDown = Math.floor(cents)
+
+//   if (roundedDown > 1) {
+//     quarters = Math.floor(roundedDown / 25)
+//     obj.Quarters = quarters
+//     afterQuarters = roundedDown - (quarters * 25)
+//     console.log("afterQuarters", afterQuarters)
+//   }
+
+//   if (afterQuarters > 1) {
+//     dimes = Math.floor(afterQuarters / 10)
+//     obj.Dimes = dimes
+//     afterDimes = afterQuarters - (dimes * 10)
+//     console.log("afterDimes", afterDimes)
+//   }
+
+//   if (afterDimes > 1) {
+//     nickels = Math.floor(afterDimes / 5)
+//     obj.Nickels = nickels
+//     afterNickels = afterDimes - (nickels * 5)
+//     console.log("afterNickels", afterNickels)
+//   }
+
+//   if (afterNickels >= 1) {
+//     pennies = afterNickels
+//     obj.Pennies = pennies
+//   }
+
+//   return obj
+// }
+
+// console.log(looseChange(61))
+
 function looseChange(cents) {
   let obj = { 'Nickels': 0, 'Pennies': 0, 'Dimes': 0, 'Quarters': 0 }
   let quarters = 0
-  let afterQuarters = 0
   let dimes = 0
-  let afterDimes = 0
   let nickels = 0
-  let afterNickels = 0
   let pennies = 0
-  let afterPennies = 0
 
   if (cents <= 0) {
     return obj
   }
 
-  roundedDown = Math.floor(cents)
+  total = Math.floor(cents)
 
-  if (roundedDown > 1) {
-    quarters = Math.floor(roundedDown / 25)
+  if (total >= 25 ) {
+    quarters = Math.floor(total / 25)
     obj.Quarters = quarters
-    afterQuarters = roundedDown - (quarters * 25)
+    total = total - (quarters * 25)
+    console.log("Quarters", total)
   }
 
-  if (afterQuarters > 1) {
-    dimes = Math.floor(afterQuarters / 10)
+  if (total >= 10) {
+    dimes = Math.floor(total / 10)
     obj.Dimes = dimes
-    afterDimes = afterQuarters - (dimes * 10)
+    total = total - (dimes * 10)
+    console.log("Dimes", total)
   }
 
-  if (afterDimes > 1) {
-    nickels = Math.floor(afterDimes / 5)
-    console.log(nickels)
+  if (total >= 5) {
+    nickels = Math.floor(total / 5)
     obj.Nickels = nickels
-    afterNickels = afterDimes - (nickels * 5)
+    total = total - (nickels * 5)
+    console.log("Nickels", total)
   }
 
-  if (afterNickels >= 1) {
-    console.log(afterNickels)
-    pennies = afterNickels
-    console.log(pennies)
+  if (total >= 1) {
+    pennies = total
     obj.Pennies = pennies
   }
 
   return obj
 }
 
-console.log(looseChange(68))
+console.log(looseChange(61))
 
 
 
