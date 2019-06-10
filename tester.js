@@ -1376,16 +1376,28 @@ The method hits the if condition and the most highly nested call returns immedia
 // console.log(parseFloat())
 
 function looseChange(cents) {
-  if (cents <= 0) {
+  let obj = { 'Nickels': 0, 'Pennies': 0, 'Dimes': 0, 'Quarters': 0 }
+  let quarters = 0
+  let dimes = 0
+  let nickels = 0
+  let pennies = 0
 
+  if (cents <= 0) {
+    return obj
   }
 
-
   roundedDown = Math.floor(cents)
-  return roundedDown
+
+  if (roundedDown > 1) {
+    quarters = Math.floor(roundedDown/25)
+  }
+
+  return quarters
+
+
 }
 
-console.log(looseChange(7.9))
+console.log(looseChange(68))
 
 
 
