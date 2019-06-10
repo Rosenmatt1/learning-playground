@@ -1378,9 +1378,13 @@ The method hits the if condition and the most highly nested call returns immedia
 function looseChange(cents) {
   let obj = { 'Nickels': 0, 'Pennies': 0, 'Dimes': 0, 'Quarters': 0 }
   let quarters = 0
+  let afterQuarters = 0
   let dimes = 0
+  let afterDimes = 0
   let nickels = 0
+  let afterNickels = 0
   let pennies = 0
+  let afterPennies = 0
 
   if (cents <= 0) {
     return obj
@@ -1389,12 +1393,13 @@ function looseChange(cents) {
   roundedDown = Math.floor(cents)
 
   if (roundedDown > 1) {
-    quarters = Math.floor(roundedDown/25)
+    quarters = Math.floor(roundedDown / 25)
+    obj.Quarters = quarters
+    afterQuarters = roundedDown - (quarters * 25)
+    console.log(afterQuarters)
   }
 
-  return quarters
-
-
+  return obj
 }
 
 console.log(looseChange(68))
