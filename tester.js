@@ -1466,17 +1466,27 @@ The method hits the if condition and the most highly nested call returns immedia
 
 // console.log(looseChange(61))
 
-let string = "bam!boo!!!"
+let string = "bamboo!!!"
 
 intenseString = (str) => {
+  let exclam = "!"
+  let count = 0
+  let finder = str.indexOf(exclam)
 
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] === "!" && str[i + 1] !== "!") {
+  for (let i = finder; i < str.length; i++){
+    if (str[i] !== exclam) {
       return false
+    } else {
+      count++
+      console.log(count)
     }
   }
 
-  return true
+  if (count >= 3) {
+    return true
+  }
+
+  return false
 }
 
 console.log(intenseString(string))
