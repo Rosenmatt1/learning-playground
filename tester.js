@@ -1396,7 +1396,26 @@ function looseChange(cents) {
     quarters = Math.floor(roundedDown / 25)
     obj.Quarters = quarters
     afterQuarters = roundedDown - (quarters * 25)
-    console.log(afterQuarters)
+  }
+
+  if (afterQuarters > 1) {
+    dimes = Math.floor(afterQuarters / 10)
+    obj.Dimes = dimes
+    afterDimes = afterQuarters - (dimes * 10)
+  }
+
+  if (afterDimes > 1) {
+    nickels = Math.floor(afterDimes / 5)
+    console.log(nickels)
+    obj.Nickels = nickels
+    afterNickels = afterDimes - (nickels * 5)
+  }
+
+  if (afterNickels >= 1) {
+    console.log(afterNickels)
+    pennies = afterNickels
+    console.log(pennies)
+    obj.Pennies = pennies
   }
 
   return obj
