@@ -1375,5 +1375,17 @@ The method hits the if condition and the most highly nested call returns immedia
 // let number = "501abcdeg"
 // console.log(parseFloat())
 
+function looseChange(cents) {
+  if (cents <= 0) {
+
+  }
+
+
+  roundedDown = Math.floor(cents)
+  return roundedDown
+}
+
+console.log(looseChange(7.9))
+
 
 
