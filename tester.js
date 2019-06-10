@@ -1422,49 +1422,64 @@ The method hits the if condition and the most highly nested call returns immedia
 
 // console.log(looseChange(61))
 
-function looseChange(cents) {
-  let obj = { 'Nickels': 0, 'Pennies': 0, 'Dimes': 0, 'Quarters': 0 }
-  let quarters = 0
-  let dimes = 0
-  let nickels = 0
-  let pennies = 0
+// function looseChange(cents) {
+//   let obj = { 'Nickels': 0, 'Pennies': 0, 'Dimes': 0, 'Quarters': 0 }
+//   let quarters = 0
+//   let dimes = 0
+//   let nickels = 0
+//   let pennies = 0
 
-  if (cents <= 0) {
-    return obj
+//   if (cents <= 0) {
+//     return obj
+//   }
+
+//   total = Math.floor(cents)
+
+//   if (total >= 25 ) {
+//     quarters = Math.floor(total / 25)
+//     obj.Quarters = quarters
+//     total = total - (quarters * 25)
+//     console.log("Quarters", total)
+//   }
+
+//   if (total >= 10) {
+//     dimes = Math.floor(total / 10)
+//     obj.Dimes = dimes
+//     total = total - (dimes * 10)
+//     console.log("Dimes", total)
+//   }
+
+//   if (total >= 5) {
+//     nickels = Math.floor(total / 5)
+//     obj.Nickels = nickels
+//     total = total - (nickels * 5)
+//     console.log("Nickels", total)
+//   }
+
+//   if (total >= 1) {
+//     pennies = total
+//     obj.Pennies = pennies
+//   }
+
+//   return obj
+// }
+
+// console.log(looseChange(61))
+
+let string = "bam!boo!!!"
+
+intenseString = (str) => {
+
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === "!" && str[i + 1] !== "!") {
+      return false
+    }
   }
 
-  total = Math.floor(cents)
-
-  if (total >= 25 ) {
-    quarters = Math.floor(total / 25)
-    obj.Quarters = quarters
-    total = total - (quarters * 25)
-    console.log("Quarters", total)
-  }
-
-  if (total >= 10) {
-    dimes = Math.floor(total / 10)
-    obj.Dimes = dimes
-    total = total - (dimes * 10)
-    console.log("Dimes", total)
-  }
-
-  if (total >= 5) {
-    nickels = Math.floor(total / 5)
-    obj.Nickels = nickels
-    total = total - (nickels * 5)
-    console.log("Nickels", total)
-  }
-
-  if (total >= 1) {
-    pennies = total
-    obj.Pennies = pennies
-  }
-
-  return obj
+  return true
 }
 
-console.log(looseChange(61))
+console.log(intenseString(string))
 
 
 
