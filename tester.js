@@ -1466,30 +1466,68 @@ The method hits the if condition and the most highly nested call returns immedia
 
 // console.log(looseChange(61))
 
-let string = "bamboo!!!"
+// let string = "bambo!o!!!"
 
-intenseString = (str) => {
-  let exclam = "!"
-  let count = 0
-  let finder = str.indexOf(exclam)
+// intenseString = (str) => {
+//   let exclam = "!"
+//   let count = 0
+//   let finder = str.indexOf(exclam)
 
-  for (let i = finder; i < str.length; i++){
-    if (str[i] !== exclam) {
-      return false
-    } else {
-      count++
-      console.log(count)
-    }
-  }
+//   for (let i = finder; i < str.length; i++){
+//     if (str[i] !== exclam) {
+//       return false
+//     } else {
+//       count++
+//       console.log(count)
+//     }
+//   }
 
-  if (count >= 3) {
-    return true
-  }
+//   if (count >= 3) {
+//     return true
+//   }
 
-  return false
+//   return false
+// }
+
+// console.log(intenseString(string))
+// let array = ["A", "B", "C", "B", "E"]
+
+// mode = (arr) => {
+//   let obj = []
+//   let max = 0
+//   let most;
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if (!obj[arr[i]]) {
+//       obj[arr[i]] = 1
+//     } else {
+//       obj[arr[i]]++
+//     }
+//   }
+
+// for (let key in obj){
+//   // console.log(obj[key])
+//   if (obj[key] > max) {
+//     // console.log(key)
+//     max = obj[key]
+//     most = key
+//   }
+// }
+
+// return most
+// }
+
+// console.log(mode(array))
+
+function fetchPosts() {
+  fetch('http://jsonplaceholder.typicode.com/users')
+  .then(res => res.json())
+  // const data = await res.json()
+  
+  // console.log(data)
 }
 
-console.log(intenseString(string))
+fetchPosts()
 
 
 
