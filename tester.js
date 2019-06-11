@@ -136,7 +136,7 @@
 //     console.log("charat", str.charAt(0))
 //     console.log("substr", str.substr(1))
 //     return reverseString(str.substr(1)) + str.charAt(0);
-/* 
+/*
 First Part of the recursion method
 You need to remember that you won’t have just one call, you’ll have several nested calls
 Each call: str === "?"        	                  reverseString(str.subst(1))     + str.charAt(0)
@@ -151,7 +151,7 @@ The method hits the if condition and the most highly nested call returns immedia
 4th call will return reverseString("o") + "l" = "o" + "l"
 3rd call will return reverseString("lo") + "l" = "o" + "l" + "l"
 2nd call will return reverserString("llo") + "e" = "o" + "l" + "l" + "e"
-1st call will return reverserString("ello") + "h" = "o" + "l" + "l" + "e" + "h" 
+1st call will return reverserString("ello") + "h" = "o" + "l" + "l" + "e" + "h"
 */
 // }
 // console.log(reverseString("hello"))
@@ -1523,7 +1523,7 @@ The method hits the if condition and the most highly nested call returns immedia
 //   fetch('http://jsonplaceholder.typicode.com/users')
 //   .then(res => res.json())
 //   // const data = await res.json()
-  
+
 //   // console.log(data)
 // }
 
@@ -1555,13 +1555,39 @@ The method hits the if condition and the most highly nested call returns immedia
 // var X = outer()
 // console.log(X)
 
-function median(numbers) {
+// function median(numbers) {
 
-  if (numbers.length % 2 !== 0) {
-    return numbers[(numbers.length / 2) - .5]
-  } else {
-    return (numbers[(numbers.length / 2) - 1] + numbers[(numbers.length / 2)]) / 2
-  }
+//   if (numbers.length % 2 !== 0) {
+//     return numbers[(numbers.length / 2) - .5]
+//   } else {
+//     return (numbers[(numbers.length / 2) - 1] + numbers[(numbers.length / 2)]) / 2
+//   }
+// }
 
+swap = (arr, idx1, idx2) => {
+  let temp = arr[idx1]
+  arr[idx1] = arr[idx2]
+  arr[idx2] = temp
 }
+
+let array = [5, 9, 4, 2, 1, 10, 22]
+
+sort = (arr) => {
+  let temp;
+
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[j] > arr[j + 1]) {
+        temp = arr[j]
+        arr[j] = arr[j +1]
+        arr[j +1] = temp
+      }
+    }
+  }
+  return arr
+}
+
+console.log(sort(array))
+
+
 
