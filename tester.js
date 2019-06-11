@@ -1519,15 +1519,27 @@ The method hits the if condition and the most highly nested call returns immedia
 
 // console.log(mode(array))
 
-function fetchPosts() {
-  fetch('http://jsonplaceholder.typicode.com/users')
-  .then(res => res.json())
-  // const data = await res.json()
+// function fetchPosts() {
+//   fetch('http://jsonplaceholder.typicode.com/users')
+//   .then(res => res.json())
+//   // const data = await res.json()
   
-  // console.log(data)
+//   // console.log(data)
+// }
+
+// fetchPosts()
+
+let string = "bamboozal"
+
+const bamm = (str) => {
+
+  for (let i = str.length - 1; i >= 0; i--) {
+    console.log(str[i])
+  }
+
 }
 
-fetchPosts()
+console.log(bamm(string))
 
 
 
