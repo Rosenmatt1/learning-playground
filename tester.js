@@ -1529,17 +1529,39 @@ The method hits the if condition and the most highly nested call returns immedia
 
 // fetchPosts()
 
-let string = "bamboozal"
+// let string = "bamboozal"
 
-const bamm = (str) => {
+// const bamm = (str) => {
 
-  for (let i = str.length - 1; i >= 0; i--) {
-    console.log(str[i])
+//   for (let i = str.length - 1; i >= 0; i--) {
+//     console.log(str[i])
+//   }
+
+// }
+
+// console.log(bamm(string))
+
+// function outer() {
+//   var b = 10
+
+//   function inner() {
+//     var a = 20;
+//     console.log(a + b);
+//   }
+
+//   return inner;
+// }
+
+// var X = outer()
+// console.log(X)
+
+function median(numbers) {
+
+  if (numbers.length % 2 !== 0) {
+    return numbers[(numbers.length / 2) - .5]
+  } else {
+    return (numbers[(numbers.length / 2) - 1] + numbers[(numbers.length / 2)]) / 2
   }
 
 }
-
-console.log(bamm(string))
-
-
 
