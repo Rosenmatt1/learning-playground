@@ -1591,32 +1591,46 @@ The method hits the if condition and the most highly nested call returns immedia
 
 // console.log(sort(array))
 
-let string = "jimjim"
+// let string = "jimjim"
 
-equals = (str) => {
-  let first = ""
-  let second = ""
+// equals = (str) => {
+//   let first = ""
+//   let second = ""
 
-  if (str.length % 2 !== 0) return false
+//   if (str.length % 2 !== 0) return false
+
+//   for (let i = 0; i < str.length; i++) {
+//     if (i < str.length / 2) {
+//       first += str[i]
+//     } else {
+//       second += str[i]
+//     }
+//   }
+
+//   console.log(first)
+//   console.log(second)
+//   if (first === second) {
+//     return true
+//   }
+
+//   return false
+// }
+
+// console.log(equals(string))
+
+let string = "Yo"
+
+mapper = (str) => {
+  let obj = {}
 
   for (let i = 0; i < str.length; i++) {
-    if (i < str.length / 2) {
-      first += str[i]
-    } else {
-      second += str[i]
-    }
+    obj[str[i]] = str.indexOf(str[i])
   }
+  return obj
 
-  console.log(first)
-  console.log(second)
-  if (first === second) {
-    return true
-  }
-
-  return false
 }
 
-console.log(equals(string))
+console.log(mapper(string))
 
 
 
