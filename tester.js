@@ -1564,30 +1564,59 @@ The method hits the if condition and the most highly nested call returns immedia
 //   }
 // }
 
-swap = (arr, idx1, idx2) => {
-  let temp = arr[idx1]
-  arr[idx1] = arr[idx2]
-  arr[idx2] = temp
-}
+// swap = (arr, idx1, idx2) => {
+//   let temp = arr[idx1]
+//   arr[idx1] = arr[idx2]
+//   arr[idx2] = temp
+// }
 
-let array = [5, 9, 4, 2, 1, 10, 22]
+// let array = [5, 9, 4, 2, 1, 10, 22]
 
-sort = (arr) => {
-  let temp;
+// sort = (arr) => {
+//   let temp;
 
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < arr.length; j++) {
-      if (arr[j] > arr[j + 1]) {
-        temp = arr[j]
-        arr[j] = arr[j +1]
-        arr[j +1] = temp
-      }
+//   for (let i = 0; i < arr.length; i++) {
+//     console.log("i", arr[i])
+//     for (let j = 0; j < arr.length; j++) {
+//       console.log("j", arr[j])
+//       if (arr[j] > arr[j + 1]) {
+//         temp = arr[j]
+//         arr[j] = arr[j +1]
+//         arr[j +1] = temp
+//       }
+//     }
+//   }
+//   return arr
+// }
+
+// console.log(sort(array))
+
+let string = "jimjim"
+
+equals = (str) => {
+  let first = ""
+  let second = ""
+
+  if (str.length % 2 !== 0) return false
+
+  for (let i = 0; i < str.length; i++) {
+    if (i < str.length / 2) {
+      first += str[i]
+    } else {
+      second += str[i]
     }
   }
-  return arr
+
+  console.log(first)
+  console.log(second)
+  if (first === second) {
+    return true
+  }
+
+  return false
 }
 
-console.log(sort(array))
+console.log(equals(string))
 
 
 
