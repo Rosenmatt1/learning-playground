@@ -1632,22 +1632,42 @@ mapper = (str) => {
 
 console.log(mapper(string))
 
+// between = (num1, num2) => {
+//   let count = 0
+
+//   for (let i = num1; i < num2; i++) {
+//     console.log(i)
+//     if (i % 2 !== 0) {
+//       count++
+//     }
+//   }
+
+//   if (count >= 3) return true
+
+//   return false
+// }
+
+// console.log(between(0, 5))
+
+
 between = (num1, num2) => {
   let count = 0
+  let num = num1
 
-  for (let i = num1; i < num2; i++) {
-    console.log(i)
-    if (i % 2 !== 0) {
+  while (num < num2 - 1) {
+    num++
+    if (num % 2 !== 0) {
       count++
     }
+
+    if (count >= 3) {
+      return true
+    }
   }
-
-  if (count >= 3) return true
-
   return false
 }
 
-console.log(between(0, 5))
+console.log(between(1, 6))
 
 
 
