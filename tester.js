@@ -1688,4 +1688,26 @@ The method hits the if condition and the most highly nested call returns immedia
 // console.log(binarySearch(array))
 
 
+// Write a function named createString that takes a number and a letter and creates a string of that many letters
+
+// Example:
+
+// If you pass 3, "a" it should return "aaa"
+// If you pass 2, "b" it should return "bb"
+
+
+
+letters = (str, num) => {
+  let result = ""
+
+  for (let i = 0; i < num; i++) {
+    result += str
+  }
+
+return result 
+}
+
+console.log(letters("a", 3))
+
+
 
