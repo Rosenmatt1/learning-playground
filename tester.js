@@ -1618,19 +1618,19 @@ The method hits the if condition and the most highly nested call returns immedia
 
 // console.log(equals(string))
 
-let string = "Yo"
+// let string = "Yo"
 
-mapper = (str) => {
-  let obj = {}
+// mapper = (str) => {
+//   let obj = {}
 
-  for (let i = 0; i < str.length; i++) {
-    obj[str[i]] = str.indexOf(str[i])
-  }
-  return obj
+//   for (let i = 0; i < str.length; i++) {
+//     obj[str[i]] = str.indexOf(str[i])
+//   }
+//   return obj
 
-}
+// }
 
-console.log(mapper(string))
+// console.log(mapper(string))
 
 // between = (num1, num2) => {
 //   let count = 0
@@ -1650,24 +1650,42 @@ console.log(mapper(string))
 // console.log(between(0, 5))
 
 
-between = (num1, num2) => {
-  let count = 0
-  let num = num1
+// between = (num1, num2) => {
+//   let count = 0
+//   let num = num1
 
-  while (num < num2 - 1) {
-    num++
-    if (num % 2 !== 0) {
-      count++
-    }
+//   while (num < num2 - 1) {
+//     num++
+//     if (num % 2 !== 0) {
+//       count++
+//     }
 
-    if (count >= 3) {
-      return true
-    }
-  }
-  return false
-}
+//     if (count >= 3) {
+//       return true
+//     }
+//   }
+//   return false
+// }
 
-console.log(between(1, 6))
+// console.log(between(1, 6))
+
+
+// let array = [1,8,4,5,9,12,3]
+
+// binarySearch = (arr) => {
+//   let temp;
+  
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = 0; j < arr.length; j++) {
+//       temp = arr[j]
+//       arr[j] = arr[j +1]
+//       arr[j+1] = temp
+//     }
+//   }
+//   return arr
+// }
+
+// console.log(binarySearch(array))
 
 
 
