@@ -1697,17 +1697,88 @@ The method hits the if condition and the most highly nested call returns immedia
 
 
 
-letters = (str, num) => {
-  let result = ""
+// letters = (str, num) => {
+//   let result = ""
 
-  for (let i = 0; i < num; i++) {
-    result += str
+//   for (let i = 0; i < num; i++) {
+//     result += str
+//   }
+
+// return result 
+// }
+
+// console.log(letters("a", 3))
+
+// Write a function named factorial that takes a number and returns its factorial
+
+// Factorial of 4 means 4 * 3 * 2 * 1
+
+// Example:
+
+// If you pass 4 it should return 24 since that's 4 * 3 * 2 * 1
+// If you pass 5 it should return 120 since that's 5 * 4 * 3 * 2 * 1
+
+// fact = (num) => {
+//   let result = 0
+
+//   for (let i = num; i >= 1; i--) {
+//     result *= i * (i -1)
+//   }
+
+//   console.log(result)
+// }
+
+// console.log(fact(5))
+
+// fact = (num) => {
+//   let result = num
+
+//   if (num <= 1) {
+//     return 1
+//   }
+
+//   while (num > 1) {
+//     num--
+//     result = result * num
+//   }
+
+//   return result 
+// }
+
+// console.log(fact(5))
+
+// function factorialize(num) {
+//   // If the number is less than 0, reject it.
+//   if (num < 0)
+//     return -1;
+
+//   // If the number is 0, its factorial is 1.
+//   else if (num == 0)
+//     return 1;
+
+//   // Otherwise, call the recursive procedure again
+//   else {
+//     return (num * factorialize(num - 1));
+
+  
+//   }
+// }
+// console.log(factorialize(5))
+
+fact = (num) => {
+  let result = num
+
+  if (num <= 1) return num
+
+  while (num > 1) {
+    num--
+    result = result * num
   }
 
-return result 
+  return result
 }
 
-console.log(letters("a", 3))
+console.log(fact(5))
 
 
 
